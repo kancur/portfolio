@@ -1,0 +1,39 @@
+@use "variables" as *;
+
+header {
+  background-color: $primary-color;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-content {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    font-weight: bold;
+  
+
+    .pre-heading {
+      color: #E06C75;
+      background-color: #f0f0f0;
+      width: fit-content;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    h1 {
+      font-size: 3rem;
+      color: $primary-font-color;
+    }
+  }
+
+}
