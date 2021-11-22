@@ -1,6 +1,7 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackInlineSVGPlugin = require("html-webpack-inline-svg-plugin");
 const autoprefixer = require("autoprefixer");
 
 module.exports = {
@@ -9,11 +10,12 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
+    clean: true,
   },
   devtool: "source-map",
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, "dist"),
     },
     compress: true,
     port: 3000,
@@ -21,6 +23,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(html)$/,
+        use: ["html-loader"],
+      },
       {
         test: /\.(scss|css)$/,
         use: [
@@ -50,13 +56,18 @@ module.exports = {
           },
         ],
       },
-      {
+      /*       {
         test: /\.(woff|woff2|eot|ttf|svg|jpg|png)$/,
         use: {
           loader: "url-loader",
         },
-      },
-      {
+      }, */
+      /*       {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      }, */
+
+      /* {
         test: /\.(jpg|png|gif)$/,
         use: [
           {
@@ -67,35 +78,20 @@ module.exports = {
               useRelativePath: true,
             },
           },
-          {
-            loader: "image-webpack-loader",
-            options: {
-              mozjpeg: {
-                progressive: true,
-                quality: 65,
-              },
-              optipng: {
-                enabled: true,
-              },
-              pngquant: {
-                quality: "65-90",
-                speed: 4,
-              },
-              gifsicle: {
-                interlaced: false,
-              },
-              webp: {
-                quality: 75,
-              },
-            },
-          },
         ],
-      },
-    ],  
+      }, */
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: "./src/index.html",
+    }),
+    new HtmlWebpackInlineSVGPlugin({
+      svgoConfig: [
+        {
+          removeViewBox: true,
+        },
+      ],
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",

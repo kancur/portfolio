@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 header {
-  background-color: $primary-color;
+  background-color: $primary;
   display: flex;
   flex-direction: column;
 }
@@ -32,7 +32,7 @@ header {
   
     h1 {
       font-size: 3rem;
-      color: $primary-font-color;
+      color: $font-primary;
     }
   }
 

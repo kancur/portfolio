@@ -1,0 +1,32 @@
+@use "variables" as *;
+
+.techstack {
+  h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-family: "Source Code Pro";
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    cursor: default;
+  }
+
+  ul > li {
+    display: flex;
+    gap: 6px;
+    background-color: rgb(235, 233, 233);
+    padding: 6px;
+    color: rgb(54, 54, 54);
+    width: fit-content;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+
+  .tech-stack-icon {
+    width: auto;
+    height: 20px;
+  }
+}

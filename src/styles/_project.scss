@@ -1,14 +1,38 @@
+@use "variables" as *;
+@use "tech-stack";
+
+
 .project {
+  display: flex;
+  gap: 2rem;
+  max-width: 900px;
+  display: flex;
+  background-color: $project-bg;
   color: white;
-  background-color: #21252b;
   padding: 2rem;
-  margin: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+  
+  .project-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
+  
+  .project-featured {
+    width: 30%;
+  }
+  
+  .project-heading-wrapper {
+    h2 {
+      font-size: 2.3rem;
+      font-weight: 400;
+      margin-bottom: 0.6rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
 
+  }
 }

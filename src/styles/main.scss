@@ -3,18 +3,26 @@
 @use "nav";
 @use "header";
 @use "project";
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900");
+@use "utils";
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
 
 body {
+  font-family: "Source Code Pro", monospace;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
 }
 
-.first-section {
-  background-color: #21252b;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.window-height {
-  min-height: 100vh;
+section {
+  padding: 2rem;
 }
 
+@media only screen and (max-width: $breakpoint-mobile) {
+  section {
+    padding: 0.5rem;
+  }
+}
