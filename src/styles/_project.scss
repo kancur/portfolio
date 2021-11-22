@@ -1,29 +1,34 @@
-@use "variables" as *;
-@use "tech-stack";
-
+@use 'variables' as *;
+@use 'tech-stack';
 
 .project {
   display: flex;
   gap: 2rem;
-  max-width: 900px;
+  max-width: 1120px;
   display: flex;
   background-color: $project-bg;
   color: white;
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
-  
+
+  .subheading {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      font-family: 'Source Code Pro';
+  }
+
   .project-content {
     width: 70%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
-  
+
   .project-featured {
     width: 30%;
   }
-  
+
   .project-heading-wrapper {
     h2 {
       font-size: 2.3rem;
@@ -33,6 +38,5 @@
     p {
       font-size: 1.3rem;
     }
-
   }
 }
