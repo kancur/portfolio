@@ -2,7 +2,8 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackInlineSVGPlugin = require("html-webpack-inline-svg-plugin");
-const autoprefixer = require("autoprefixer");
+const CopyPlugin = require("copy-webpack-plugin");
+
 
 module.exports = {
   mode: "development",
@@ -101,6 +102,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "src/assets/just_copy"},
+      ],
     }),
   ],
 };
