@@ -488,9 +488,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ setFirstSectionHeight; }
 /* harmony export */ });
-function setFirstSectionHeight() {
+function setFirstSectionHeight(height) {
   const header = document.querySelector('header');
-  header.style.height = window.innerHeight + 'px';
+  header.style.height = height + 'px';
 }
 
 /***/ }),
@@ -625,8 +625,25 @@ document.addEventListener('DOMContentLoaded', function () {
   (0,_firstSectionHeightHandler__WEBPACK_IMPORTED_MODULE_5__["default"])();
   (0,_smoothscroll__WEBPACK_IMPORTED_MODULE_4__["default"])();
 
-  
-  window.addEventListener('resize', _firstSectionHeightHandler__WEBPACK_IMPORTED_MODULE_5__["default"]);
+  let windowWidth = window.innerWidth;
+
+  window.addEventListener('resize', () => {
+    // only fire if the width has changed -- dont resize on mobile address bar hide/show
+    if (window.innerWidth === windowWidth) return;
+    windowWidth = window.innerWidth;
+    (0,_firstSectionHeightHandler__WEBPACK_IMPORTED_MODULE_5__["default"])(window.innerHeight);
+  });
+
+
+  const hamburger = document.querySelector("#hamburger")
+  const nav = document.querySelector("nav");
+
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('is-active')
+    nav.classList.toggle('show-mobile-menu')
+  })
+
 });
 
 }();
