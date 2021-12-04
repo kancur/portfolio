@@ -634,16 +634,17 @@ document.addEventListener('DOMContentLoaded', function () {
     (0,_firstSectionHeightHandler__WEBPACK_IMPORTED_MODULE_5__["default"])(window.innerHeight);
   });
 
+  const hamburger = document.querySelector('#hamburger');
+  const nav = document.querySelector('nav');
 
-  const hamburger = document.querySelector("#hamburger")
-  const nav = document.querySelector("nav");
+  hamburger.addEventListener('click', () => toggleMenu())
 
+  nav.addEventListener('click', () => toggleMenu())
 
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('is-active')
-    nav.classList.toggle('show-mobile-menu')
-  })
-
+  const toggleMenu = () => {
+    hamburger.classList.toggle('is-active');
+    nav.classList.toggle('show-mobile-menu');
+  };
 });
 
 }();
