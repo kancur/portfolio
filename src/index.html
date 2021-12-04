@@ -2,79 +2,129 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Peter Šmid - Javascript Developer</title>
-    <meta name="description" content="Portfólio Petra Šmida" />
+    <title>Peter Smid - Web Developer</title>
+    <meta name="description" content="Peter Smid's Portfolio Website" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <style>
+      nav {
+        transform: scale(0);
+        opacity: 0;
+      }
+    </style>
   </head>
-  <body>
-    <header class="window-height">
-      <nav>
-        <ul>
-          <li>
-            <a href="#projects">Moje projekty</a>
-          </li>
-          <li>
-            <a href="/">O mne</a>
-          </li>
-          <li>
-            <a href="/about">Kontakt</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header-content">
-        <div class="intro">
-          <p class="pre-heading">Kto som?</p>
-          <h1 id="page-heading">Peter Šmid - Javascript Developer</h1>
+  <body class="">
+    <header>
+      <div class="nav-wrapper">
+        
+        <img src="./assets//icons/PS.png" class="logo" />
+        <button id="hamburger" class="hamburger hamburger--spin" type="button">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </button>
+        <div class="nav-special-wrap">
+          <nav>
+            <ul>
+              <li>
+                <a data-nav href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a data-nav href="#about">About me</a>
+              </li>
+              <li>
+                <a data-nav href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
+      <div class="header-content">
+        <div class="intro">
+          <p class="pre-heading">Welcome!</p>
+          <h1 id="page-heading">I'm Peter, a Junior Web Developer</h1>
+        </div>
+        <a data-nav href="#portfolio" class="arrow-down-wrapper">
+          <div>
+            <p>View Portfolio</p>
+            <img inline class="arrow-down" src="./assets/icons/arrow-down.svg" />
+          </div>
+        </a>
+      </div>
     </header>
-    <main>
-      <section id="projects" class="window-height">
-        <div class="project first-section">
+    <main id="portfolio">
+      <section id="najkempy" class="window-height">
+        <div class="project first-section" data-aos="fade-up" data-aos-duration="1000">
           <div class="project-content">
             <div class="project-heading-wrapper">
               <img src="assets/icons/najkempy-logo.png" style="max-width: 250px" />
               <!-- <h2 class="monospace">Najkempy.sk</h2> -->
-              <p>Katalóg kempov na Slovensku</p>
+              <p>Slovak campsite directory</p>
             </div>
             <div class="techstack">
               <h3 class="subheading">Tech stack:</h3>
               <ul>
-                <li>
+                <li data-aos="fade" data-aos-delay="200">
                   <img inline class="tech-stack-icon" src="assets/icons/React-icon.svg" />
                   React
                 </li>
-                <li>
+                <li data-aos="fade" data-aos-delay="350">
                   <img inline class="tech-stack-icon" src="assets/icons/Nextjs-logo.svg" />
                   NextJS
                 </li>
-                <li>
+                <li data-aos="fade" data-aos-delay="500">
                   <img inline class="tech-stack-icon" src="assets/icons/Tailwind_CSS_Logo.svg" />
                   Tailwindcss
                 </li>
-                <li>
+                <li data-aos="fade" data-aos-delay="650">
                   <img inline class="tech-stack-icon" src="assets/icons/MongoDB.svg" />
                   MongoDB
                 </li>
-                <li>
+                <li data-aos="fade" data-aos-delay="800">
                   <img class="tech-stack-icon" src="assets/icons/express.png" />
                   Express
                 </li>
-                <li>
+                <li data-aos="fade" data-aos-delay="950">
                   <img inline class="tech-stack-icon" src="assets/icons/nodejs.svg" />
                   Node
                 </li>
               </ul>
             </div>
-            <div class="challenges">
-              <h3 class="subheading">Challenges:</h3>
+            <div class="features have-p-padded">
+              <h3 class="subheading">Description:</h3>
+              <p>
+                A full-stack personal project. My main frontend goal was to get more familiar with server-side
+                rendering, routing, authentication and working with cookies. The next.js app is deployed to
+                Vercel.
+              </p>
+              <p>
+                The node.js backend runs on Express framework and is deployed to Heroku. MongoDB is used with
+                mongoose ODM, and is deployed using mongoDB Atlas.
+              </p>
+            </div>
+            <div class="flex buttons-wrapper">
+              <button class="github-button bg-primary">
+                <img inline src="assets/icons/github.svg" class="btn-icon" />
+                Github Repo
+              </button>
+              <button class="bg-secondary">
+                <img inline src="assets/icons/link.svg" class="btn-icon" />
+                Visit
+              </button>
             </div>
           </div>
-          <div class="project-featured">
+          <div
+            data-aos="fade"
+            data-aos-duration="2000"
+            data-aos-once="true"
+            data-aos-delay="200"
+            data-aos-offset="120"
+            class="project-featured"
+          >
             <img src="./assets/images/najkempy-preview.webp" />
           </div>
         </div>
       </section>
+      <section class="window-height" style="background-color: aqua">blablabla</section>
     </main>
     <footer></footer>
   </body>
