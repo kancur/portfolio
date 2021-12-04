@@ -1,10 +1,10 @@
-/*!***********************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/styles/main.scss ***!
-  \***********************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/main.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&family=Source+Sans+Pro:wght@400;600;700;900&display=swap);
-/*!********************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/aos/dist/aos.css ***!
-  \********************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./node_modules/aos/dist/aos.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
 [data-aos][data-aos][data-aos-duration="50"], body[data-aos-duration="50"] [data-aos] {
   transition-duration: 50ms;
 }
@@ -922,7 +922,8 @@
 }
 
 [data-aos^=flip][data-aos^=flip] {
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   transition-property: transform;
 }
 
@@ -957,9 +958,9 @@
 [data-aos=flip-down].aos-animate {
   transform: perspective(2500px) rotateX(0);
 }
-/*!***************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/styles/main.scss (1) ***!
-  \***************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/main.scss (1) ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -1005,13 +1006,26 @@ table {
   border-spacing: 0;
 }
 
+#mobile-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .nav-wrapper {
   width: 100%;
   padding: 10px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   justify-content: space-between;
   font-family: "Source Code Pro";
+}
+@media (min-width: 640px) {
+  .nav-wrapper {
+    flex-direction: row;
+  }
 }
 .nav-wrapper .mobile-menu-icon {
   width: 46px;
@@ -1020,19 +1034,37 @@ table {
 }
 
 nav {
-  display: none;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 1rem;
+  display: flex;
+  position: absolute;
+  background-color: #0000006b;
+  z-index: 10;
+  box-shadow: 0 0 10px #00000052;
+  transform: translate(0, -100%);
+  transition: all 0.5s;
   font-size: 1.2rem;
   align-items: center;
 }
 @media (min-width: 640px) {
   nav {
     display: flex;
+    flex-direction: column;
   }
 }
 nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
   margin: 0;
-  padding: 0;
   list-style: none;
+}
+@media (min-width: 640px) {
+  nav ul {
+    padding: 0.5rem;
+  }
 }
 nav li {
   color: #fafafa;
@@ -1044,6 +1076,10 @@ nav a {
   text-decoration: none;
 }
 
+.show-mobile-menu {
+  transform: translate(0, 0);
+}
+
 header {
   height: 100vh;
   background-color: #6d64eb;
@@ -1053,7 +1089,7 @@ header {
 
 .logo {
   fill: #fafafa;
-  max-width: 25px;
+  max-width: 35px;
   width: 100%;
   padding: 10px;
   box-sizing: content-box;
@@ -1075,6 +1111,8 @@ header {
 .header-content .intro .pre-heading {
   color: #e06c75;
   background-color: #fafafa;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 5px;
   border-radius: 5px;
@@ -1090,10 +1128,13 @@ header {
   color: #fafafa;
   font-size: 2rem;
 }
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .header-content .intro h1 {
     font-size: 3rem;
   }
+}
+.header-content .arrow-down-wrapper > * {
+  font-family: "Source Code Pro";
 }
 .header-content .arrow-down-wrapper {
   width: 100%;
@@ -1101,16 +1142,17 @@ header {
   bottom: 0;
   text-align: center;
   font-size: 1.4rem;
-}
-.header-content .arrow-down-wrapper p {
-  margin-bottom: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 .header-content .arrow-down-wrapper .arrow-down {
-  max-width: 56px;
+  max-width: 25px;
   height: auto;
-  opacity: 0.8;
+  opacity: 0.9;
   fill: #fafafa;
-  margin-bottom: 1rem;
 }
 
 .techstack ul {
@@ -1126,6 +1168,8 @@ header {
   gap: 3px;
   background-color: #ebe9e9;
   color: #363636;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 10px;
   font-weight: 400;
@@ -1260,6 +1304,15 @@ header {
   opacity: 1;
 }
 
+.hamburger {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 50;
+  display: flex !important;
+}
 @media (min-width: 640px) {
   .hamburger {
     display: none !important;
@@ -1274,7 +1327,7 @@ header {
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-  padding: 0px 0px;
+  padding: 5px 5px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -1289,19 +1342,19 @@ header {
   overflow: visible;
 }
 .hamburger:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 .hamburger.is-active:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: #fff;
+  background-color: #fafafac7;
 }
 
 .hamburger-box {
-  width: 40px;
+  width: 30px;
   height: 24px;
   display: inline-block;
   position: relative;
@@ -1313,9 +1366,9 @@ header {
   margin-top: -2px;
 }
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  width: 40px;
+  width: 30px;
   height: 4px;
-  background-color: #fff;
+  background-color: #fafafac7;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;
@@ -1337,7 +1390,7 @@ header {
  * 3DX
  */
 .hamburger--3dx .hamburger-box {
-  perspective: 80px;
+  perspective: 60px;
 }
 .hamburger--3dx .hamburger-inner {
   transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -1360,7 +1413,7 @@ header {
  * 3DX Reverse
  */
 .hamburger--3dx-r .hamburger-box {
-  perspective: 80px;
+  perspective: 60px;
 }
 .hamburger--3dx-r .hamburger-inner {
   transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -1383,7 +1436,7 @@ header {
  * 3DY
  */
 .hamburger--3dy .hamburger-box {
-  perspective: 80px;
+  perspective: 60px;
 }
 .hamburger--3dy .hamburger-inner {
   transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -1406,7 +1459,7 @@ header {
  * 3DY Reverse
  */
 .hamburger--3dy-r .hamburger-box {
-  perspective: 80px;
+  perspective: 60px;
 }
 .hamburger--3dy-r .hamburger-inner {
   transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -1429,7 +1482,7 @@ header {
  * 3DXY
  */
 .hamburger--3dxy .hamburger-box {
-  perspective: 80px;
+  perspective: 60px;
 }
 .hamburger--3dxy .hamburger-inner {
   transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -1452,7 +1505,7 @@ header {
  * 3DXY Reverse
  */
 .hamburger--3dxy-r .hamburger-box {
-  perspective: 80px;
+  perspective: 60px;
 }
 .hamburger--3dxy-r .hamburger-inner {
   transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -1475,20 +1528,20 @@ header {
  * Arrow
  */
 .hamburger--arrow.is-active .hamburger-inner::before {
-  transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+  transform: translate3d(-6px, 0, 0) rotate(-45deg) scale(0.7, 1);
 }
 .hamburger--arrow.is-active .hamburger-inner::after {
-  transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1);
+  transform: translate3d(-6px, 0, 0) rotate(45deg) scale(0.7, 1);
 }
 
 /*
  * Arrow Right
  */
 .hamburger--arrow-r.is-active .hamburger-inner::before {
-  transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1);
+  transform: translate3d(6px, 0, 0) rotate(45deg) scale(0.7, 1);
 }
 .hamburger--arrow-r.is-active .hamburger-inner::after {
-  transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+  transform: translate3d(6px, 0, 0) rotate(-45deg) scale(0.7, 1);
 }
 
 /*
@@ -1502,12 +1555,12 @@ header {
 }
 .hamburger--arrowalt.is-active .hamburger-inner::before {
   top: 0;
-  transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(0.7, 1);
+  transform: translate3d(-6px, -7.5px, 0) rotate(-45deg) scale(0.7, 1);
   transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 .hamburger--arrowalt.is-active .hamburger-inner::after {
   bottom: 0;
-  transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(0.7, 1);
+  transform: translate3d(-6px, 7.5px, 0) rotate(45deg) scale(0.7, 1);
   transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 
@@ -1522,12 +1575,12 @@ header {
 }
 .hamburger--arrowalt-r.is-active .hamburger-inner::before {
   top: 0;
-  transform: translate3d(8px, -10px, 0) rotate(45deg) scale(0.7, 1);
+  transform: translate3d(6px, -7.5px, 0) rotate(45deg) scale(0.7, 1);
   transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 .hamburger--arrowalt-r.is-active .hamburger-inner::after {
   bottom: 0;
-  transform: translate3d(8px, 10px, 0) rotate(-45deg) scale(0.7, 1);
+  transform: translate3d(6px, 7.5px, 0) rotate(-45deg) scale(0.7, 1);
   transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 
@@ -1723,15 +1776,15 @@ header {
   background-color: transparent !important;
 }
 .hamburger--emphatic.is-active .hamburger-inner::before {
-  left: -80px;
-  top: -80px;
-  transform: translate3d(80px, 80px, 0) rotate(45deg);
+  left: -60px;
+  top: -60px;
+  transform: translate3d(60px, 60px, 0) rotate(45deg);
   transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .hamburger--emphatic.is-active .hamburger-inner::after {
-  right: -80px;
-  top: -80px;
-  transform: translate3d(-80px, 80px, 0) rotate(-45deg);
+  right: -60px;
+  top: -60px;
+  transform: translate3d(-60px, 60px, 0) rotate(-45deg);
   transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -1759,15 +1812,15 @@ header {
   background-color: transparent !important;
 }
 .hamburger--emphatic-r.is-active .hamburger-inner::before {
-  left: -80px;
-  top: 80px;
-  transform: translate3d(80px, -80px, 0) rotate(-45deg);
+  left: -60px;
+  top: 60px;
+  transform: translate3d(60px, -60px, 0) rotate(-45deg);
   transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .hamburger--emphatic-r.is-active .hamburger-inner::after {
-  right: -80px;
-  top: 80px;
-  transform: translate3d(-80px, -80px, 0) rotate(45deg);
+  right: -60px;
+  top: 60px;
+  transform: translate3d(-60px, -60px, 0) rotate(45deg);
   transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -1807,7 +1860,7 @@ header {
   transform: translate3d(0, 10px, 0) rotate(45deg);
 }
 .hamburger--slider.is-active .hamburger-inner::before {
-  transform: rotate(-45deg) translate3d(-5.7142857143px, -6px, 0);
+  transform: rotate(-45deg) translate3d(-4.2857142857px, -6px, 0);
   opacity: 0;
 }
 .hamburger--slider.is-active .hamburger-inner::after {
@@ -1833,7 +1886,7 @@ header {
   transform: translate3d(0, 10px, 0) rotate(-45deg);
 }
 .hamburger--slider-r.is-active .hamburger-inner::before {
-  transform: rotate(45deg) translate3d(5.7142857143px, -6px, 0);
+  transform: rotate(45deg) translate3d(4.2857142857px, -6px, 0);
   opacity: 0;
 }
 .hamburger--slider-r.is-active .hamburger-inner::after {
@@ -2165,7 +2218,7 @@ button {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 22px;
+  font-size: 24px;
   color: #fafafa;
 }
 
