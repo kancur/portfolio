@@ -1,7 +1,29 @@
+@use 'variables' as *;
+
 .window-height {
   min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .monospace {
-  font-family: "Source Code Pro";
+  font-family: 'Source Code Pro';
+}
+
+.flex {
+  display: flex;
+}
+
+.bg-primary {
+  background-color: $primary;
+}
+.bg-secondary {
+  background-color: $secondary;
+}
+
+.have-p-padded {
+  p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }

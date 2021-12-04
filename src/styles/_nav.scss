@@ -1,25 +1,94 @@
-@use "variables" as *;
+@use 'variables' as *;
+@import 'mixins';
 
-nav {
-  padding: 20px;
+.nav-wrapper {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  position: absolute;
+  justify-content: space-between;
+  font-family: $font-mono;
+
+  @include breakpoint(sm) {
+    flex-direction: row;
+  }
+
+  .mobile-menu-icon {
+    width: 46px;
+    fill: $font-color-primary;
+    opacity: 0.75;
+  }
+}
+
+.nav-special-wrap {
+  flex-basis: 100%;
   display: flex;
   justify-content: flex-end;
 
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  @include breakpoint(sm) {
+    flex-basis: 0;
+    flex-grow: 1;
   }
-  
+}
+
+nav {
+  align-self: flex-end;
+  padding: 1.2rem 0.3rem;
+  display: flex;
+  position: relative;
+  background-color: #0000006b;
+  z-index: 10;
+  box-shadow: 0 0 10px #00000052;
+  transform: scale(0);
+  opacity: 0;
+  transform-origin: top right;
+  overflow: hidden;
+  transition: transform 0.4s, opacity 0.4s;
+
+  @include breakpoint(sm) {
+    display: flex;
+
+    padding: 0.5rem 0.3rem;
+    background-color: transparent;
+    box-shadow: none;
+
+    transition: none !important;
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
+  font-size: 1.2rem;
+  align-items: center;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin: 0;
+    list-style: none;
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+      padding: 0.5rem;
+    }
+  }
+
   li {
-    color: $font-primary;
+    color: $font-color-primary;
     display: inline-block;
-    font-size: 1.5rem;
+    // font-size: 1.5rem;
   }
 
   a {
-    color: $font-primary;
+    color: $font-color-primary;
     padding: 6px 12px;
     text-decoration: none;
   }
+}
+
+.show-mobile-menu {
+  transform: scale(1);
+  opacity: 1;
 }

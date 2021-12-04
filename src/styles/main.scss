@@ -1,15 +1,40 @@
-@use "reset";
-@use "variables" as *;
-@use "nav";
-@use "header";
-@use "project";
-@use "utils";
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
+@use 'reset';
+@use 'variables' as *;
+@use 'nav';
+@use 'header';
+@use 'project';
+@use 'utils';
+@use 'najkempy';
+@use 'animations';
+@import 'mixins';
+@import "hamburgers-settings";
+@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
-  font-family: "Source Code Pro", monospace;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Code Pro', monospace;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
+  line-height: 1.3;
+  color: $font-color-primary;
+}
+
+p {
+  color: $font-color-primary;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $font-color-primary;
 }
 
 img {
@@ -18,11 +43,32 @@ img {
 }
 
 section {
-  padding: 2rem;
+  padding: 2.5rem 0.8rem;
 }
 
-@media only screen and (max-width: $breakpoint-mobile) {
-  section {
-    padding: 0.5rem;
+.unordered-list {
+  list-style-type: disc;
+  padding-left: 1rem;
+
+  li:not(:last-child) {
+    margin-bottom: 0.5rem;
   }
+}
+
+button {
+  padding: 5px 8px;
+  border: none;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  color: $font-color-primary;
+  @include breakpoint(sm) {
+    font-size: 21px;
+  }
+}
+
+a {
+  text-decoration: none;
 }

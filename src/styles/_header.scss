@@ -1,39 +1,81 @@
-@use "variables" as *;
+@use 'variables' as *;
+@import 'mixins';
 
 header {
+  height: 100vh;
   background-color: $primary;
   display: flex;
   flex-direction: column;
 }
 
+.logo {
+  fill: $font-color-primary;
+  max-width: 35px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: content-box;
+}
+
 .header-content {
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
   align-items: center;
   justify-content: center;
-
 
   .intro {
     display: flex;
     flex-direction: column;
     padding: 0 1rem;
     font-weight: bold;
-  
 
     .pre-heading {
-      color: #E06C75;
-      background-color: #f0f0f0;
+      color: #e06c75;
+      background-color: $font-color-primary;
       width: fit-content;
       padding: 5px;
       border-radius: 5px;
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: 1.5em;
+      margin-bottom: 0.5rem;
+      @include breakpoint(sm) {
+        font-size: 2rem;
+      }
     }
-  
+
     h1 {
-      font-size: 3rem;
-      color: $font-primary;
+      color: $font-color-primary;
+      font-size: 2rem;
+      @include breakpoint(md) {
+        font-size: 3rem;
+      }
     }
   }
 
+  .arrow-down-wrapper > * {
+    font-family: $font-mono;
+  }
+
+  .arrow-down-wrapper {
+    padding-top: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    div {
+      margin-bottom: 1rem;
+    }
+
+    .arrow-down {
+      max-width: 20px;
+      height: auto;
+      opacity: 0.9;
+      fill: $font-color-primary;
+    }
+  }
 }

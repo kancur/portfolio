@@ -1,35 +1,53 @@
 @use 'variables' as *;
 @use 'tech-stack';
+@import 'mixins';
 
 .project {
+  font-size: 19px;
   display: flex;
   gap: 2rem;
   max-width: 1120px;
+  margin: 0 auto;
   display: flex;
   background-color: $project-bg;
   color: white;
-  padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  @include breakpoint(sm) {
+    padding: 2rem;
+  }
 
   .subheading {
-      margin-bottom: 10px;
-      font-size: 1.5rem;
-      font-family: 'Source Code Pro';
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-family: 'Source Code Pro';
+    font-weight: 600;
+    color: #FFF
   }
 
   .project-content {
-    width: 70%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    @include breakpoint(md) {
+      width: 70%;
+    }
   }
 
   .project-featured {
-    width: 30%;
+    display: none;
+    @include breakpoint(md) {
+      width: 30%;
+      display: block;
+    }
   }
 
   .project-heading-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     h2 {
       font-size: 2.3rem;
       font-weight: 400;
@@ -38,5 +56,17 @@
     p {
       font-size: 1.3rem;
     }
+  }
+}
+
+.buttons-wrapper {
+  gap: 1rem;
+  flex-grow: 1;
+  align-items: flex-end;
+  justify-content: center;
+
+  .btn-icon {
+    width: 20px;
+    fill: $font-color-primary
   }
 }
