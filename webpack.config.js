@@ -37,16 +37,21 @@ module.exports = {
               sourceMap: true,
             },
           },
-          /* {
+          {
             loader: "postcss-loader",
             options: {
-              autoprefixer: {
-                browsers: ["last 2 versions"],
+              postcssOptions: {
+                plugins: [
+                  [
+                    "autoprefixer",
+                    {
+                      // Options
+                    },
+                  ],
+                ],
               },
-              sourceMap: true,
-              plugins: () => [autoprefixer],
             },
-          }, */
+          },
           {
             loader: "sass-loader",
             options: {
