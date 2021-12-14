@@ -16,7 +16,7 @@
     <header>
       <div class="nav-wrapper">
         
-        <img src="./assets//icons/PS.png" class="logo" />
+        <img src="<%= require('./assets/icons/PS.png').default %>" class="logo" />
         <button id="hamburger" class="hamburger hamburger--spin" type="button">
           <div class="hamburger-box">
             <div class="hamburger-inner"></div>
@@ -46,7 +46,8 @@
         <a data-nav href="#portfolio" class="arrow-down-wrapper">
           <div>
             <p>View Portfolio</p>
-            <img inline class="arrow-down" src="./assets/icons/arrow-down.svg" />
+            <!-- <img inline class="arrow-down" src="./assets/icons/arrow-down.svg" /> -->
+            <%= require("./partials/arrow-down.html").default %>
           </div>
         </a>
       </div>
@@ -64,27 +65,27 @@
               <h3 class="subheading">Tech stack:</h3>
               <ul>
                 <li data-aos="fade" data-aos-delay="200">
-                  <img inline class="tech-stack-icon" src="assets/icons/React-icon.svg" />
+                  <%= require("./partials/labels/react.html").default %>
                   React
                 </li>
                 <li data-aos="fade" data-aos-delay="350">
-                  <img inline class="tech-stack-icon" src="assets/icons/Nextjs-logo.svg" />
+                  <%= require("./partials/labels/nextjs.html").default %>
                   NextJS
                 </li>
                 <li data-aos="fade" data-aos-delay="500">
-                  <img inline class="tech-stack-icon" src="assets/icons/Tailwind_CSS_Logo.svg" />
+                  <%= require("./partials/labels/tailwindcss.html").default %>
                   Tailwindcss
                 </li>
                 <li data-aos="fade" data-aos-delay="650">
-                  <img inline class="tech-stack-icon" src="assets/icons/MongoDB.svg" />
+                  <%= require("./partials/labels/mongoDB.html").default %>
                   MongoDB
                 </li>
                 <li data-aos="fade" data-aos-delay="800">
-                  <img class="tech-stack-icon" src="assets/icons/express.png" />
+                  <%= require("./partials/labels/express.html").default %>
                   Express
                 </li>
                 <li data-aos="fade" data-aos-delay="950">
-                  <img inline class="tech-stack-icon" src="assets/icons/nodejs.svg" />
+                  <%= require("./partials/labels/node.html").default %>
                   Node
                 </li>
               </ul>
@@ -103,7 +104,7 @@
             </div>
             <div class="flex buttons-wrapper">
               <button class="github-button bg-primary">
-                <img inline src="assets/icons/github.svg" class="btn-icon" />
+                <%= require("./partials/labels/github.html").default %>
                 Github Repo
               </button>
               <button class="bg-secondary">
@@ -124,7 +125,9 @@
           </div>
         </div>
       </section>
-      <section class="window-height" style="background-color: aqua">blablabla</section>
+      <section class="window-height" style="background-color: aqua">
+        <%= require("./partials/labels/mongoDB.html").default %>
+      </section>
     </main>
     <footer></footer>
   </body>

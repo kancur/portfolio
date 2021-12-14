@@ -24,6 +24,10 @@ module.exports = {
   },
   module: {
     rules: [
+/*       {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      }, */
       {
         test: /\.(html)$/,
         use: ["html-loader"],
@@ -90,15 +94,15 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./src/index.html.ejs",
     }),
-    new HtmlWebpackInlineSVGPlugin({
+    /* new HtmlWebpackInlineSVGPlugin({
       svgoConfig: [
         {
           removeViewBox: true,
         },
       ],
-    }),
+    }), */
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
