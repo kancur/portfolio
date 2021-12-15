@@ -1337,17 +1337,27 @@ header {
 #firesim h1 {
   font-family: "Source Code Pro";
   letter-spacing: -1px;
-  font-size: 2.4rem;
-  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+@media (min-width: 640px) {
+  #firesim h1 {
+    font-size: 2.6rem;
+  }
 }
 #firesim h2 {
   font-family: "Source Code Pro";
   letter-spacing: -1px;
-  font-weight: 600;
   font-size: 1.4rem;
   text-transform: uppercase;
+}
+@media (min-width: 640px) {
+  #firesim h2 {
+    font-size: 1.6rem;
+  }
 }
 #firesim .infoblock {
   margin-bottom: 1rem;
@@ -1365,8 +1375,9 @@ header {
 #firesim .buttons {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.5rem;
+  justify-content: center;
 }
 #firesim .techstack li {
   background-color: #ffffff;
@@ -2774,5 +2785,9 @@ button.swiper-pagination-bullet {
 .swiper-pagination-lock {
   display: none;
 }
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./node_modules/swiper/modules/keyboard/keyboard.min.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+
 
 /*# sourceMappingURL=main.css.map*/
