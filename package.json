@@ -6,6 +6,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "dev": "webpack serve --no-hot --live-reload",
+    "devhot": "webpack serve --hot",
     "watch": "webpack watch",
     "build": "webpack",
     "build-production": "NODE_ENV=production webpack --mode=production"
@@ -20,7 +21,8 @@
     "html-webpack-plugin": "^5.5.0",
     "normalize.css": "^8.0.1",
     "postcss-preset-env": "^7.0.1",
-    "smoothscroll-polyfill": "^0.4.4"
+    "smoothscroll-polyfill": "^0.4.4",
+    "swiper": "^7.3.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
