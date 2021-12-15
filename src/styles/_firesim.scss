@@ -1,0 +1,134 @@
+@import 'mixins';
+@import 'variables';
+
+#firesim {
+  //background-color: rgb(230, 230, 230);
+  background: linear-gradient(151deg, #ff8217, #e74000);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #434343;
+  font-size: 20px;
+  padding: 3rem 1rem;
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-family: "Source Code Pro";
+    letter-spacing: -1px;
+    font-size: 2rem;
+    //font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    @include breakpoint(sm) {
+      font-size: 2.6rem;
+    }
+  }
+
+
+  h2 {
+    font-family: 'Source Code Pro';
+    letter-spacing: -1px;
+    //font-weight: 600;
+    font-size: 1.4rem;
+    //margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    
+    @include breakpoint(sm) {
+      font-size: 1.6rem;
+    }
+
+  }
+  
+  .infoblock {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .visit-button {
+    background-color: $green;
+  }
+
+  .btn-icon {
+    width: 20px;
+    fill: #fafafa;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+
+  }
+
+  .techstack li {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 3px #0000003d;
+  }
+
+  .wrap {
+    max-width: 960px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px #00000052;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: auto;
+    padding: 2rem 1.5rem;
+    @include breakpoint(sm) {
+      padding: 2rem 2.5rem;
+    }
+  }
+
+}
+
+.custom-shape-divider-top-1639517926 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1639517926 svg {
+  position: relative;
+  display: block;
+  width: calc(121% + 1.3px);
+  height: 39px;
+}
+
+.custom-shape-divider-top-1639517926 .shape-fill {
+  fill: #e2e2e2;
+}
+
+.custom-shape-divider-bottom-1639518347 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1639518347 svg {
+  position: relative;
+  display: block;
+  width: calc(202% + 1.3px);
+  height: 39px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1639518347 .shape-fill {
+  fill: #ffffff;
+}

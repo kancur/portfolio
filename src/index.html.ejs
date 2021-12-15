@@ -15,8 +15,7 @@
   <body class="">
     <header>
       <div class="nav-wrapper">
-        
-        <img src="<%= require('./assets/icons/PS.png').default %>" class="logo" />
+        <img src="./assets//icons/PS.png" class="logo" />
         <button id="hamburger" class="hamburger hamburger--spin" type="button">
           <div class="hamburger-box">
             <div class="hamburger-inner"></div>
@@ -125,8 +124,106 @@
           </div>
         </div>
       </section>
-      <section class="window-height" style="background-color: aqua">
-        <%= require("./partials/labels/mongoDB.html").default %>
+      <section id="firesim">
+        <div class="custom-shape-divider-top-1639517926">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+        <div class="wrap">
+          <h1>Forest Fire Simulator</h1>
+
+          <div class="swiper">
+            <div class="gradient"></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/forest1.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/forest2.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/forest3.png" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+          <div class="infoblock">
+            <h2>Tech Stack:</h2>
+
+            <div class="techstack">
+              <ul>
+                <li data-aos="fade" data-aos-delay="200">
+                  <img inline class="tech-stack-icon" src="assets/icons/javascript.svg" />
+                  Javascript
+                </li>
+                <li data-aos="fade" data-aos-delay="350">
+                  <img inline class="tech-stack-icon" src="assets/icons/css3.svg" />
+                  CSS
+                </li>
+                <li data-aos="fade" data-aos-delay="500">
+                  <img
+                    style="max-height: 16px"
+                    inline
+                    class="tech-stack-icon"
+                    src="assets/icons/pixijs.svg"
+                  />
+                  PixiJS
+                </li>
+                <li data-aos="fade" data-aos-delay="650">
+                  <img inline class="tech-stack-icon" src="assets/icons/nodejs.svg" />
+                  Node
+                </li>
+                <li data-aos="fade" data-aos-delay="800">
+                  <img inline class="tech-stack-icon" src="assets/icons/webpack.svg" />
+                  Webpack
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="infoblock">
+            <h2>Project Description:</h2>
+            <p>
+              A simple app simulating a fire spread in a forest (albeit not a thermodynamic simulation 🙂, but
+              a game-like approximation). Built to improve my OOP skills. The visual part was done in
+              <a href="https://pixijs.com/">PIXI.js</a> and runs in WebGL.
+            </p>
+          </div>
+          <div class="buttons">
+            <button class="github-button bg-primary">
+              <img inline src="assets/icons/github.svg" class="btn-icon" />
+              Github Repo
+            </button>
+            <button class="visit-button">
+              <img inline src="assets/icons/link.svg" class="btn-icon" />
+              Live Website
+            </button>
+          </div>
+        </div>
+        <div class="custom-shape-divider-bottom-1639518347">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
       </section>
     </main>
     <footer></footer>
