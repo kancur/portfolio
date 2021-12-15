@@ -18,7 +18,7 @@
 
   .mobile-menu-icon {
     width: 46px;
-    fill: $font-color-primary;
+    fill: $xwhite;
     opacity: 0.75;
   }
 }
@@ -76,13 +76,13 @@ nav {
   }
 
   li {
-    color: $font-color-primary;
+    color: $xwhite;
     display: inline-block;
     // font-size: 1.5rem;
   }
 
   a {
-    color: $font-color-primary;
+    color: $xwhite;
     padding: 6px 12px;
     text-decoration: none;
   }

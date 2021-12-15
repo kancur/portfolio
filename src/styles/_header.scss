@@ -9,7 +9,7 @@ header {
 }
 
 .logo {
-  fill: $font-color-primary;
+  fill: $xwhite;
   max-width: 35px;
   width: 100%;
   padding: 10px;
@@ -31,7 +31,7 @@ header {
 
     .pre-heading {
       color: #e06c75;
-      background-color: $font-color-primary;
+      background-color: $xwhite;
       width: fit-content;
       padding: 5px;
       border-radius: 5px;
@@ -43,7 +43,7 @@ header {
     }
 
     h1 {
-      color: $font-color-primary;
+      color: $xwhite;
       font-size: 2rem;
       @include breakpoint(md) {
         font-size: 3rem;
@@ -56,6 +56,7 @@ header {
   }
 
   .arrow-down-wrapper {
+    color: white;
     padding-top: 20px;
     width: 100%;
     position: absolute;
@@ -75,7 +76,7 @@ header {
       max-width: 20px;
       height: auto;
       opacity: 0.9;
-      fill: $font-color-primary;
+      fill: $xwhite;
     }
   }
 }
