@@ -24,6 +24,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/swiper/modules/keyboard/keyboard.min.css":
+/*!***************************************************************!*\
+  !*** ./node_modules/swiper/modules/keyboard/keyboard.min.css ***!
+  \***************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./node_modules/swiper/modules/navigation/navigation.min.css":
 /*!*******************************************************************!*\
   !*** ./node_modules/swiper/modules/navigation/navigation.min.css ***!
@@ -13175,6 +13188,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.min.css");
 /* harmony import */ var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! swiper/css/navigation */ "./node_modules/swiper/modules/navigation/navigation.min.css");
 /* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! swiper/css/pagination */ "./node_modules/swiper/modules/pagination/pagination.min.css");
+/* harmony import */ var swiper_css_keyboard__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! swiper/css/keyboard */ "./node_modules/swiper/modules/keyboard/keyboard.min.css");
 
 
 
@@ -13186,13 +13200,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-swiper__WEBPACK_IMPORTED_MODULE_6__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_6__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_6__.Pagination]);
+swiper__WEBPACK_IMPORTED_MODULE_6__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_6__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_6__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_6__.Keyboard]);
 
 const swiper = new swiper__WEBPACK_IMPORTED_MODULE_6__["default"]('.swiper', {
   slidesPerView: 'auto',
   centeredSlides: true,
   spaceBetween: 30,
   //grabCursor: true,
+  initialSlide: 1,
+  keyboard: {
+    enabled: true,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -13201,8 +13219,9 @@ const swiper = new swiper__WEBPACK_IMPORTED_MODULE_6__["default"]('.swiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  initialSlide: 1,
 });
+
+swiper.slideTo(1)
 
 aos__WEBPACK_IMPORTED_MODULE_1___default().init({
   offset: 60,
