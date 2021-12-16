@@ -94,7 +94,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html.ejs",
+      template: "./src/index.html",
     }),
     /* new HtmlWebpackInlineSVGPlugin({
       svgoConfig: [
