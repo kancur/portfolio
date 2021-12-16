@@ -13221,7 +13221,6 @@ const swiper = new swiper__WEBPACK_IMPORTED_MODULE_6__["default"]('.swiper', {
   },
 });
 
-swiper.slideTo(1)
 
 aos__WEBPACK_IMPORTED_MODULE_1___default().init({
   offset: 60,
@@ -13229,7 +13228,8 @@ aos__WEBPACK_IMPORTED_MODULE_1___default().init({
 smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_0___default().polyfill();
 
 document.addEventListener('DOMContentLoaded', function () {
-  (0,_firstSectionHeightHandler__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  swiper.slideTo(1)
+  ;(0,_firstSectionHeightHandler__WEBPACK_IMPORTED_MODULE_5__["default"])();
   (0,_smoothscroll__WEBPACK_IMPORTED_MODULE_4__["default"])();
 
   let windowWidth = window.innerWidth;
