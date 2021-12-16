@@ -30,7 +30,6 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-swiper.slideTo(1)
 
 AOS.init({
   offset: 60,
@@ -38,6 +37,7 @@ AOS.init({
 smoothscroll.polyfill();
 
 document.addEventListener('DOMContentLoaded', function () {
+  swiper.slideTo(1)
   setFirstSectionHeight();
   initSmoothScroll();
 
