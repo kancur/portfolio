@@ -19,7 +19,7 @@
     font-family: "Source Code Pro";
     letter-spacing: -1px;
     font-size: 2rem;
-    //font-weight: 600;
+    font-weight: 500;
     line-height: 1;
     text-transform: uppercase;
     margin-bottom: 1rem;
@@ -33,7 +33,7 @@
   h2 {
     font-family: 'Source Code Pro';
     letter-spacing: -1px;
-    //font-weight: 600;
+    font-weight: 600;
     font-size: 1.4rem;
     //margin-bottom: 0.5rem;
     text-transform: uppercase;
@@ -43,6 +43,12 @@
     }
 
   }
+
+  .swiper-pagination-bullet {
+    background-color: #d8d8d8;
+  }
+
+
   
   .infoblock {
     margin-bottom: 1rem;
