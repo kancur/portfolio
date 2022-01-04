@@ -51,6 +51,7 @@
       </div>
     </header>
     <main id="portfolio">
+
       <section id="najkempy" class="window-height">
         <div class="project first-section" data-aos="fade-up" data-aos-duration="1000">
           <div class="project-content">
@@ -123,7 +124,8 @@
           </div>
         </div>
       </section>
-      <section id="firesim">
+
+      <section id="firesim" class="projectv2">
         <div class="custom-shape-divider-top-1639517926">
           <svg
             data-name="Layer 1"
@@ -193,8 +195,8 @@
           <div class="infoblock">
             <h2>Project Description:</h2>
             <p>
-              A simple app simulating a forest fire (not a thermodynamic simulation, but
-              a game-like approximation). Built to improve my OOP skills. The visual part was done in
+              A simple app simulating a forest fire (not a thermodynamic simulation, but a game-like
+              approximation). Built to improve my OOP skills. The visual part was done in
               <a href="https://pixijs.com/">PIXI.js</a> and runs in WebGL.
             </p>
           </div>
@@ -216,11 +218,84 @@
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
           >
+            <defs>
+              <linearGradient id="gradient">
+                <stop offset="0%" style="stop-color:rgb(32,119,196);stop-opacity:1.00" />
+                <stop offset="100%" style="stop-color:rgb(16,105,181);stop-opacity:1.00" />
+              </linearGradient>
+            </defs>
             <path
+              fill="url(#gradient)"
               d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
               class="shape-fill"
             ></path>
+
           </svg>
+        </div>
+      </section>
+
+      <section id="battleship" class="projectv2">
+        <div class="wrap">
+          <h1>Battleship Game</h1>
+
+          <div class="swiper">
+            <div class="gradient"></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/battleship1.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/battleship2.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/battleship3.png" />
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+          <div class="infoblock">
+            <h2>Tech Stack:</h2>
+
+            <div class="techstack">
+              <ul>
+                <li data-aos="fade" data-aos-delay="200">
+                  <img inline class="tech-stack-icon" src="assets/icons/javascript.svg" />
+                  Javascript
+                </li>
+                <li data-aos="fade" data-aos-delay="350">
+                  <img inline class="tech-stack-icon" src="assets/icons/css3.svg" />
+                  CSS
+                </li>
+                <li data-aos="fade" data-aos-delay="500">
+                  <img inline class="tech-stack-icon" src="assets/icons/jest.svg" />
+                  Jest
+                </li>
+                <li data-aos="fade" data-aos-delay="650">
+                  <img inline class="tech-stack-icon" src="assets/icons/webpack.svg" />
+                  Webpack
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="infoblock">
+            <h2>Project Description:</h2>
+            <p>
+              A vanilla JS, object oriented implementation of the classic Battleship game. 
+              The main purpose was to get familiar with test-driven development.
+            </p>
+          </div>
+          <div class="buttons">
+            <a href="https://github.com/kancur/battleship" target="_blank" class="button github-button">
+              <img inline src="assets/icons/github.svg" class="btn-icon" />
+              Github Repo
+            </a>
+            <a href="https://kancur.github.io/battleship/" target="_blank" class="button visit-button">
+              <img inline src="assets/icons/link.svg" class="btn-icon" />
+              Live Website
+            </a>
+          </div>
         </div>
       </section>
     </main>
