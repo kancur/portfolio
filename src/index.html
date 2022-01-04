@@ -50,18 +50,54 @@
         </a>
       </div>
     </header>
-    <main id="portfolio">
 
-      <section id="najkempy" class="window-height">
-        <div class="project first-section" data-aos="fade-up" data-aos-duration="1000">
-          <div class="project-content">
-            <div class="project-heading-wrapper">
-              <img src="assets/icons/najkempy-logo.png" style="max-width: 250px" />
-              <!-- <h2 class="monospace">Najkempy.sk</h2> -->
-              <p>Slovak campsite directory</p>
+    <main id="portfolio">
+      <section id="najkempy" class="projectv2">
+        <div class="custom-shape-divider-top">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,64L60,58.7C120,53,240,43,360,74.7C480,107,600,181,720,202.7C840,224,960,192,1080,154.7C1200,117,1320,75,1380,53.3L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+
+        <div class="wrap">
+          <img class="logo" src="./assets/icons/najkempy-logo.png" />
+          <h1>Slovak campsite directory</h1>
+
+          <div class="swiper">
+            <div class="gradient"></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/najkempy1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/najkempy2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/najkempy3.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/najkempy4.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/najkempy5.jpg" />
+              </div>
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+          <div class="infoblock">
+            <h2>Tech Stack:</h2>
+
             <div class="techstack">
-              <h3 class="subheading">Tech stack:</h3>
               <ul>
                 <li data-aos="fade" data-aos-delay="200">
                   <img inline class="tech-stack-icon" src="assets/icons/React-icon.svg" />
@@ -89,56 +125,60 @@
                 </li>
               </ul>
             </div>
-            <div class="features have-p-padded">
-              <h3 class="subheading">Description:</h3>
-              <p>
-                A full-stack personal project. My main frontend goal was to get more familiar with server-side
-                rendering, routing, authentication and working with cookies. The next.js app is deployed to
-                Vercel.
-              </p>
-              <p>
-                The node.js backend runs on Express framework and is deployed to Heroku. MongoDB is used with
-                mongoose ODM, and is deployed using mongoDB Atlas.
-              </p>
-            </div>
-            <div class="flex buttons-wrapper">
-              <button class="github-button bg-primary">
-                <img inline src="assets/icons/github.svg" class="btn-icon" />
-                Github Repo
-              </button>
-              <button class="bg-secondary">
-                <img inline src="assets/icons/link.svg" class="btn-icon" />
-                Visit
-              </button>
-            </div>
           </div>
-          <div
-            data-aos="fade"
-            data-aos-duration="2000"
-            data-aos-once="true"
-            data-aos-delay="200"
-            data-aos-offset="120"
-            class="project-featured"
-          >
-            <img src="./assets/images/najkempy-preview.webp" />
+          <div class="infoblock">
+            <h2>Project Description:</h2>
+            <p>
+              A full-stack personal project. My main frontend goal was to get more familiar with server-side
+              rendering, routing, authentication and working with cookies. The next.js app is deployed to
+              Vercel.
+            </p>
+            <p>
+              The node.js backend runs on Express framework and is deployed to Heroku. MongoDB is used with
+              mongoose ODM, and is deployed using mongoDB Atlas.
+            </p>
+          </div>
+          <div class="buttons">
+            <a href="https://github.com/kancur/campings" target="_blank" class="button github-button">
+              <img inline src="assets/icons/github.svg" class="btn-icon" />
+              Github Repo (Frontend)
+            </a>
+            <a href="https://github.com/kancur/campings-express" target="_blank" class="button github-button">
+              <img inline src="assets/icons/github.svg" class="btn-icon" />
+              Github Repo (Backend)
+            </a>
+            <a href="https://najkempy.sk/" target="_blank" class="button visit-button">
+              <img inline src="assets/icons/link.svg" class="btn-icon" />
+              Live Website
+            </a>
           </div>
         </div>
       </section>
 
       <section id="firesim" class="projectv2">
-        <div class="custom-shape-divider-top-1639517926">
-          <svg
+        <div class="custom-shape-divider-top">
+  
+            
+            <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
+            viewBox="0 0 1440 320"
             preserveAspectRatio="none"
           >
+          <defs>
+              <linearGradient id="gradientfiresim">
+                <stop offset="0%" style="stop-color: #55ad89; stop-opacity: 1" />
+                <stop offset="100%" style="stop-color: #00a862; stop-opacity: 1" />
+              </linearGradient>
+            </defs>
             <path
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              fill="url(#gradientfiresim)"
+              d="M0,160L60,149.3C120,139,240,117,360,133.3C480,149,600,203,720,208C840,213,960,171,1080,165.3C1200,160,1320,192,1380,208L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
               class="shape-fill"
             ></path>
           </svg>
         </div>
+
         <div class="wrap">
           <h1>Forest Fire Simulator</h1>
 
@@ -211,30 +251,34 @@
             </a>
           </div>
         </div>
-        <div class="custom-shape-divider-bottom-1639518347">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <defs>
-              <linearGradient id="gradient">
-                <stop offset="0%" style="stop-color:rgb(32,119,196);stop-opacity:1.00" />
-                <stop offset="100%" style="stop-color:rgb(16,105,181);stop-opacity:1.00" />
-              </linearGradient>
-            </defs>
-            <path
-              fill="url(#gradient)"
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-              class="shape-fill"
-            ></path>
-
-          </svg>
-        </div>
+        
       </section>
 
       <section id="battleship" class="projectv2">
+
+
+        <div class="custom-shape-divider-top">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            preserveAspectRatio="none"
+          >
+            <defs>
+              <linearGradient id="gradientbattleship">
+                <stop offset="0%" style="stop-color: #ff8217; stop-opacity: 1" />
+                <stop offset="100%" style="stop-color: #e74000; stop-opacity: 1" />
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#gradientbattleship)"
+              d="M0,192L60,208C120,224,240,256,360,250.7C480,245,600,203,720,160C840,117,960,75,1080,96C1200,117,1320,203,1380,245.3L1440,288L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+
+
         <div class="wrap">
           <h1>Battleship Game</h1>
 
@@ -282,8 +326,8 @@
           <div class="infoblock">
             <h2>Project Description:</h2>
             <p>
-              A vanilla JS, object oriented implementation of the classic Battleship game. 
-              The main purpose was to get familiar with test-driven development.
+              A vanilla JS, object oriented implementation of the classic Battleship game. The main purpose
+              was to get familiar with test-driven development.
             </p>
           </div>
           <div class="buttons">
