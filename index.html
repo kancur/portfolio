@@ -51,6 +51,7 @@
       </div>
     </header>
     <main id="portfolio">
+
       <section id="najkempy" class="window-height">
         <div class="project first-section" data-aos="fade-up" data-aos-duration="1000">
           <div class="project-content">
@@ -123,7 +124,8 @@
           </div>
         </div>
       </section>
-      <section id="firesim">
+
+      <section id="firesim" class="projectv2">
         <div class="custom-shape-divider-top-1639517926">
           <svg
             data-name="Layer 1"
@@ -153,7 +155,6 @@
                 <img src="5d74bfac98a9d201d0f1.png" />
               </div>
             </div>
-            <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
@@ -194,20 +195,20 @@
           <div class="infoblock">
             <h2>Project Description:</h2>
             <p>
-              A simple app simulating a fire spread in a forest (albeit not a thermodynamic simulation 🙂, but
-              a game-like approximation). Built to improve my OOP skills. The visual part was done in
+              A simple app simulating a forest fire (not a thermodynamic simulation, but a game-like
+              approximation). Built to improve my OOP skills. The visual part was done in
               <a href="https://pixijs.com/">PIXI.js</a> and runs in WebGL.
             </p>
           </div>
           <div class="buttons">
-            <button class="github-button bg-primary">
+            <a href="https://github.com/kancur/fire-sim" target="_blank" class="button github-button">
               <img inline src="3e7863374ba3d3908b5e.svg" class="btn-icon" />
               Github Repo
-            </button>
-            <button class="visit-button">
+            </a>
+            <a href="https://kancur.github.io/fire-sim/" target="_blank" class="button visit-button">
               <img inline src="acf587d6fb567c8fdc9b.svg" class="btn-icon" />
               Live Website
-            </button>
+            </a>
           </div>
         </div>
         <div class="custom-shape-divider-bottom-1639518347">
@@ -217,11 +218,84 @@
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
           >
+            <defs>
+              <linearGradient id="gradient">
+                <stop offset="0%" style="stop-color:rgb(32,119,196);stop-opacity:1.00" />
+                <stop offset="100%" style="stop-color:rgb(16,105,181);stop-opacity:1.00" />
+              </linearGradient>
+            </defs>
             <path
+              fill="url(#gradient)"
               d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
               class="shape-fill"
             ></path>
+
           </svg>
+        </div>
+      </section>
+
+      <section id="battleship" class="projectv2">
+        <div class="wrap">
+          <h1>Battleship Game</h1>
+
+          <div class="swiper">
+            <div class="gradient"></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="77aba64d5a8d1dc11a75.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="3e6239d8f0c421b598d8.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="f35d8d26255d9bbc9f4c.png" />
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+          <div class="infoblock">
+            <h2>Tech Stack:</h2>
+
+            <div class="techstack">
+              <ul>
+                <li data-aos="fade" data-aos-delay="200">
+                  <img inline class="tech-stack-icon" src="acc4642f682cd93a4c20.svg" />
+                  Javascript
+                </li>
+                <li data-aos="fade" data-aos-delay="350">
+                  <img inline class="tech-stack-icon" src="5da907d7f5cda48f0931.svg" />
+                  CSS
+                </li>
+                <li data-aos="fade" data-aos-delay="500">
+                  <img inline class="tech-stack-icon" src="13b38c9378f071ccb269.svg" />
+                  Jest
+                </li>
+                <li data-aos="fade" data-aos-delay="650">
+                  <img inline class="tech-stack-icon" src="f8f137829c39f4dd75e5.svg" />
+                  Webpack
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="infoblock">
+            <h2>Project Description:</h2>
+            <p>
+              A vanilla JS, object oriented implementation of the classic Battleship game. 
+              The main purpose was to get familiar with test-driven development.
+            </p>
+          </div>
+          <div class="buttons">
+            <a href="https://github.com/kancur/fire-sim" target="_blank" class="button github-button">
+              <img inline src="3e7863374ba3d3908b5e.svg" class="btn-icon" />
+              Github Repo
+            </a>
+            <a href="https://kancur.github.io/fire-sim/" target="_blank" class="button visit-button">
+              <img inline src="acf587d6fb567c8fdc9b.svg" class="btn-icon" />
+              Live Website
+            </a>
+          </div>
         </div>
       </section>
     </main>
