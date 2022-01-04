@@ -5,23 +5,5 @@
   //background: linear-gradient(90deg, #2077c4, #1069b5);
   background:linear-gradient(90deg, #2077C4 0%, #1069B5 100%);  
   
-  .custom-shape-divider-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-  }
 
-  .custom-shape-divider-top svg {
-    position: relative;
-    display: block;
-    width: calc(121% + 1.3px);
-    height: 39px;
-  }
-
-  .custom-shape-divider-top .shape-fill {
-    fill: #e2e2e2;
-  }
 }

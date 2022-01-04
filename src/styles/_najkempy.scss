@@ -1,6 +1,37 @@
+@import 'mixins';
+@import 'variables';
+
 #najkempy {
-  //background-image: url("../assets/images/tent-caravan.svg");
-  //background-size: 100px;
-  background-color: #e2e2e2;
-  padding: 2.5rem 0.8rem;
+  //background-color: rgb(230, 230, 230);
+  background: linear-gradient(90deg, #55ad89, #00a862);
+
+  
+  .logo {
+    max-width: 280px;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    color: $gray;
+    @include breakpoint(sm) {
+      font-size: 1.7rem;
+    }
+  }
+
+  .custom-shape-divider-top .shape-fill {
+    fill: #6d64eb;
+  }
+
+  .custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    //width: calc(202% + 1.3px);
+    width: 100%;
+    height: 60px;
+  }
+
+  .custom-shape-divider-bottom .shape-fill {
+    //fill: white;
+  }
 }

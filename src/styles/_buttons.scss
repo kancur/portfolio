@@ -1,13 +1,19 @@
 @use 'variables' as *;
+@import 'mixins';
 
 .button {
   padding: 0.5rem;
+  font-size: 16px;
   border-radius: 14px;
   font-weight: 600;
   display: flex;
   gap: 0.3rem;
   text-decoration: none;
   transition: all 100ms;
+
+  @include breakpoint(sm) {
+    font-size: 20px;
+  }
 
   &:hover {
     transform: scale(1.02);
@@ -16,7 +22,7 @@
 }
 
 .github-button {
-  background-color: #6D64EB;
+  background-color: #6d64eb;
   color: white;
 }
 

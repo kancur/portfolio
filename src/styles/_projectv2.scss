@@ -7,8 +7,10 @@
   position: relative;
   color: #434343;
   font-size: 20px;
-  padding: 3rem 1rem 4rem 1rem;
-
+  padding: 5rem 0.6rem 2rem 0.6rem;
+  @include breakpoint(sm) {
+    padding: 7rem 1rem 1rem 1rem;
+  }
 
   p {
     margin-bottom: 0.5rem;
@@ -86,6 +88,37 @@
     padding: 2rem 1.5rem;
     @include breakpoint(sm) {
       padding: 2rem 2.5rem;
+    }
+  }
+
+  .custom-shape-divider-top {
+    margin-top: -1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-bottom {
+    margin-bottom: -1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+
+  .custom-shape-divider-top svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40px;
+    @include breakpoint(sm) {
+      height: 80px;
     }
   }
 
