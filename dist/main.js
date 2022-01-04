@@ -13228,8 +13228,8 @@ aos__WEBPACK_IMPORTED_MODULE_1___default().init({
 smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_0___default().polyfill();
 
 document.addEventListener('DOMContentLoaded', function () {
-  const swiper = document.querySelector('.swiper').swiper;
-  swiper.slideTo(1);
+  /* const swiper = document.querySelector('.swiper').swiper;
+  swiper.slideTo(1); */
   (0,_firstSectionHeightHandler__WEBPACK_IMPORTED_MODULE_5__["default"])();
   (0,_smoothscroll__WEBPACK_IMPORTED_MODULE_4__["default"])();
 
