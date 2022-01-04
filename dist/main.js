@@ -13200,7 +13200,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-swiper__WEBPACK_IMPORTED_MODULE_6__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_6__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_6__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_6__.Keyboard]);
+
+swiper__WEBPACK_IMPORTED_MODULE_6__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_6__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_6__.Keyboard]);
 
 const swiper = new swiper__WEBPACK_IMPORTED_MODULE_6__["default"]('.swiper', {
   slidesPerView: 'auto',
@@ -13212,8 +13213,8 @@ const swiper = new swiper__WEBPACK_IMPORTED_MODULE_6__["default"]('.swiper', {
     enabled: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   pagination: {
     el: '.swiper-pagination',
@@ -13221,15 +13222,14 @@ const swiper = new swiper__WEBPACK_IMPORTED_MODULE_6__["default"]('.swiper', {
   },
 });
 
-
 aos__WEBPACK_IMPORTED_MODULE_1___default().init({
   offset: 60,
 });
 smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_0___default().polyfill();
 
 document.addEventListener('DOMContentLoaded', function () {
-  swiper.slideTo(1)
-  ;(0,_firstSectionHeightHandler__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  swiper.slideTo(1);
+  (0,_firstSectionHeightHandler__WEBPACK_IMPORTED_MODULE_5__["default"])();
   (0,_smoothscroll__WEBPACK_IMPORTED_MODULE_4__["default"])();
 
   let windowWidth = window.innerWidth;
