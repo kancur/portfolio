@@ -1339,6 +1339,7 @@ header .logo {
   box-shadow: 1px 1px 3px #0000003d;
 }
 .projectv2 .wrap {
+  z-index: 30;
   max-width: 960px;
   background-color: #f2f2f2;
   border-radius: 10px;
@@ -1409,6 +1410,15 @@ header .logo {
   margin-bottom: 1em;
 }
 
+.decoration {
+  display: none;
+}
+@media (min-width: 640px) {
+  .decoration {
+    display: block;
+  }
+}
+
 #najkempy {
   background: linear-gradient(90deg, #55ad89, #00a862);
 }
@@ -1457,16 +1467,78 @@ header .logo {
 #firesim {
   background: linear-gradient(90deg, #ff8217, #e74000);
 }
-#firesim .custom-shape-divider-bottom svg {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 39px;
-  transform: rotateY(180deg);
-}
 
 #battleship {
-  background: linear-gradient(90deg, #2077C4 0%, #1069B5 100%);
+  background: linear-gradient(90deg, #2077C4, #1069B5);
+}
+
+.battleship {
+  z-index: 5;
+  position: absolute;
+  width: calc(15vw + 50px);
+  max-width: 400px;
+}
+
+.animate-right {
+  -webkit-animation: move-right 120s linear infinite;
+          animation: move-right 120s linear infinite;
+}
+
+.sway {
+  transform-origin: bottom;
+  -webkit-animation: sway 5s ease-in-out infinite;
+          animation: sway 5s ease-in-out infinite;
+}
+
+@-webkit-keyframes move-right {
+  0% {
+    transform: translateX(calc(0px - (15vw + 50px)));
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(calc(0px - (15vw + 50px)));
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+@-webkit-keyframes sway {
+  0% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
+@keyframes sway {
+  0% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
+#tunneler {
+  background: linear-gradient(90deg, #c37930, #aa6119);
+}
+
+#toolsy {
+  background: linear-gradient(90deg, #89ece3, #4fd1c5);
+}
+
+#memory-card {
+  background: linear-gradient(90deg, #d689c1, #ad4992);
 }
 
 .swiper {
@@ -1532,19 +1604,25 @@ header .logo {
     font-size: 20px;
   }
 }
-.button:hover {
-  transform: scale(1.02);
-  box-shadow: 1px 1px 3px 0px #0000004f;
-}
 
 .github-button {
   background-color: #6d64eb;
   color: white;
+  box-shadow: 1px 1px 6px #6d64eb62;
+}
+.github-button:hover {
+  transform: scale(1.02);
+  box-shadow: 1px 1px 10px 0px #6d64eb62;
 }
 
 .visit-button {
   background-color: #00a800;
   color: white;
+  box-shadow: 1px 1px 6px #00a8007a;
+}
+.visit-button:hover {
+  transform: scale(1.02);
+  box-shadow: 1px 1px 10px 0px #00a8007a;
 }
 
 .hamburger {
