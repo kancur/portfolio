@@ -6,15 +6,17 @@ header {
   background-color: $primary;
   display: flex;
   flex-direction: column;
+
+  .logo {
+    fill: $xwhite;
+    max-width: 35px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: content-box;
+  }
 }
 
-.logo {
-  fill: $xwhite;
-  max-width: 35px;
-  width: 100%;
-  padding: 10px;
-  box-sizing: content-box;
-}
+
 
 .header-content {
   display: flex;
