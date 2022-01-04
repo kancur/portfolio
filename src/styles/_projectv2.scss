@@ -1,0 +1,92 @@
+@use 'variables' as *;
+@import 'mixins';
+
+.projectv2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #434343;
+  font-size: 20px;
+  padding: 3rem 1rem;
+
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-family: "Source Code Pro";
+    letter-spacing: -1px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1rem;
+    text-align: center;
+    @include breakpoint(sm) {
+      font-size: 3rem;
+    }
+  }
+
+
+  h2 {
+    font-family: 'Source Code Pro';
+    letter-spacing: -1px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    //margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    
+    @include breakpoint(sm) {
+      font-size: 1.6rem;
+    }
+
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #d8d8d8;
+  }
+
+
+  
+  .infoblock {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btn-icon {
+    width: 20px;
+    fill: #fafafa;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+
+  }
+
+  .techstack li {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 3px #0000003d;
+  }
+
+  .wrap {
+    max-width: 960px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px #00000052;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: auto;
+    padding: 2rem 1.5rem;
+    @include breakpoint(sm) {
+      padding: 2rem 2.5rem;
+    }
+  }
+
+}
