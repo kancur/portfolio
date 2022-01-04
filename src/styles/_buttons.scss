@@ -15,18 +15,26 @@
     font-size: 20px;
   }
 
-  &:hover {
-    transform: scale(1.02);
-    box-shadow: 1px 1px 3px 0px #0000004f;
-  }
+  
 }
 
 .github-button {
   background-color: #6d64eb;
   color: white;
+  box-shadow: 1px 1px 6px #6d64eb62;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 1px 1px 10px 0px #6d64eb62;
+  }
 }
 
 .visit-button {
   background-color: #00a800;
   color: white;
+  box-shadow: 1px 1px 6px #00a8007a;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 1px 1px 10px 0px #00a8007a;
+  }
 }
