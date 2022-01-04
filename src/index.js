@@ -37,7 +37,8 @@ AOS.init({
 smoothscroll.polyfill();
 
 document.addEventListener('DOMContentLoaded', function () {
-  swiper.slideTo(1);
+  /* const swiper = document.querySelector('.swiper').swiper;
+  swiper.slideTo(1); */
   setFirstSectionHeight();
   initSmoothScroll();
 
