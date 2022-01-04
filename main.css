@@ -1278,7 +1278,7 @@ header {
   position: relative;
   color: #434343;
   font-size: 20px;
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 4rem 1rem;
 }
 .projectv2 p {
   margin-bottom: 0.5rem;
@@ -1289,7 +1289,6 @@ header {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1;
-  text-transform: uppercase;
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -1377,10 +1376,43 @@ header {
 }
 
 #najkempy {
-  background-color: #e2e2e2;
-  padding: 2.5rem 0.8rem;
+  background: linear-gradient(151deg, #63b492, #00a862);
+  padding-top: 4rem;
 }
-
+#najkempy .logo {
+  max-width: 100px;
+}
+#najkempy .custom-shape-divider-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+#najkempy .custom-shape-divider-top svg {
+  position: relative;
+  display: block;
+  width: calc(121% + 1.3px);
+  height: 39px;
+}
+#najkempy .custom-shape-divider-top .shape-fill {
+  fill: #6d64eb;
+}
+#najkempy .custom-shape-divider-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+#najkempy .custom-shape-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 60px;
+}
 [data-aos=fade-custom] {
   transform: translateZ(0) scale(0.95);
   opacity: 0;
@@ -1402,10 +1434,9 @@ header {
 }
 
 #firesim {
-  background: linear-gradient(151deg, #ff8217, #e74000);
+  background: linear-gradient(90deg, #ff8217, #e74000);
 }
-
-.custom-shape-divider-top-1639517926 {
+#firesim .custom-shape-divider-top {
   position: absolute;
   top: 0;
   left: 0;
@@ -1413,19 +1444,16 @@ header {
   overflow: hidden;
   line-height: 0;
 }
-
-.custom-shape-divider-top-1639517926 svg {
+#firesim .custom-shape-divider-top svg {
   position: relative;
   display: block;
   width: calc(121% + 1.3px);
   height: 39px;
 }
-
-.custom-shape-divider-top-1639517926 .shape-fill {
+#firesim .custom-shape-divider-top .shape-fill {
   fill: #e2e2e2;
 }
-
-.custom-shape-divider-bottom-1639518347 {
+#firesim .custom-shape-divider-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1434,15 +1462,13 @@ header {
   line-height: 0;
   transform: rotate(180deg);
 }
-
-.custom-shape-divider-bottom-1639518347 svg {
+#firesim .custom-shape-divider-bottom svg {
   position: relative;
   display: block;
   width: 100%;
   height: 39px;
   transform: rotateY(180deg);
 }
-
 #battleship {
   background: linear-gradient(90deg, #2077C4 0%, #1069B5 100%);
 }
