@@ -137,6 +137,11 @@
               The node.js backend runs on Express framework and is deployed to Heroku. MongoDB is used with
               mongoose ODM, and is deployed using mongoDB Atlas.
             </p>
+            <p>
+              The project also contains an administrative area for managing campsites. Currently only an admin 
+              can create, edit and delete campsites, however, this can be extended to allow users to submit or 
+              edit their campsites in the future.
+            </p>
           </div>
           <div class="buttons">
             <a href="https://github.com/kancur/campings" target="_blank" class="button github-button">
@@ -342,6 +347,107 @@
           </div>
         </div>
       </section>
+      
+      
+      
+      
+      <section id="tunneler" class="projectv2">
+
+
+        <div class="custom-shape-divider-top">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            preserveAspectRatio="none"
+          >
+            <defs>
+              <linearGradient id="gradienttunneler">
+                <stop offset="0%" style="stop-color: #2077C4; stop-opacity: 1" />
+                <stop offset="100%" style="stop-color: #1069B5; stop-opacity: 1" />
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#gradienttunneler)"
+              d="M0,320L60,304C120,288,240,256,360,202.7C480,149,600,75,720,69.3C840,64,960,128,1080,176C1200,224,1320,256,1380,272L1440,288L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+
+
+        <div class="wrap">
+          <h1>Tunneler Remake (Online Multiplayer)</h1>
+
+          <div class="swiper">
+            <div class="gradient"></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/tunneler1.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/tunneler2.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/tunneler3.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/tunneler4.png" />
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+          <div class="infoblock">
+            <h2>Tech Stack:</h2>
+
+            <div class="techstack">
+              <ul>
+                <li data-aos="fade" data-aos-delay="200">
+                  <img inline class="tech-stack-icon" src="assets/icons/javascript.svg" />
+                  Javascript
+                </li>
+                <li data-aos="fade" data-aos-delay="350">
+                  <img inline class="tech-stack-icon" src="assets/icons/css3.svg" />
+                  CSS
+                </li>
+                <li data-aos="fade" data-aos-delay="650">
+                  <img inline class="tech-stack-icon" src="assets/icons/webpack.svg" />
+                  Webpack
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="infoblock">
+            <h2>Project Description:</h2>
+            <p>
+              A remake of the classic DOS game Tunneler with an added feature of an online multiplayer. 
+              The main purpose was to get familiar with websockets and canvas.
+
+              <!-- The tricky part is the implementation of the multiplayer. Since the game renders only 17 times per second, and tanks move
+              exactly one pixel per frame, it is not possible to use timedelta and prediction to calculate tank movements. -->
+            </p>
+          </div>
+          <div class="buttons">
+            <a href="https://github.com/kancur/tunneler" target="_blank" class="button github-button">
+              <img inline src="assets/icons/github.svg" class="btn-icon" />
+              Github Repo (Frontend)
+            </a>
+            <a href="https://github.com/kancur/tunneler-server" target="_blank" class="button github-button">
+              <img inline src="assets/icons/github.svg" class="btn-icon" />
+              Github Repo (Backend)
+            </a>
+            <a href="https://kancur.github.io/tunneler/" target="_blank" class="button visit-button">
+              <img inline src="assets/icons/link.svg" class="btn-icon" />
+              Live Website
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+
     </main>
     <footer></footer>
   </body>
