@@ -4,12 +4,13 @@ import 'aos/dist/aos.css';
 import './styles/main.scss';
 import initSmoothScroll from './smoothscroll';
 import setFirstSectionHeight from './firstSectionHeightHandler';
-import Swiper, { Keyboard, Navigation, Pagination } from 'swiper';
+import Swiper, { Keyboard, Navigation } from 'swiper';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/keyboard'
-Swiper.use([Navigation, Pagination, Keyboard]);
+import 'swiper/css/keyboard';
+Swiper.use([Navigation, Keyboard]);
 
 const swiper = new Swiper('.swiper', {
   slidesPerView: 'auto',
@@ -21,8 +22,8 @@ const swiper = new Swiper('.swiper', {
     enabled: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   pagination: {
     el: '.swiper-pagination',
@@ -30,14 +31,13 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-
 AOS.init({
   offset: 60,
 });
 smoothscroll.polyfill();
 
 document.addEventListener('DOMContentLoaded', function () {
-  swiper.slideTo(1)
+  swiper.slideTo(1);
   setFirstSectionHeight();
   initSmoothScroll();
 
