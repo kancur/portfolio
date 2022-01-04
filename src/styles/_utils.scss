@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@import 'mixins';
 
 .window-height {
   min-height: 100vh;
@@ -23,5 +24,12 @@
   p {
     margin-top: 1em;
     margin-bottom: 1em;
+  }
+}
+
+.decoration {
+  display: none;
+  @include breakpoint(lg) {
+    display: block;
   }
 }

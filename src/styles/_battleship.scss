@@ -4,3 +4,59 @@
 #battleship {
   background:linear-gradient(90deg, #2077C4, #1069B5);  
 }
+
+.battleship {
+  z-index: 5;
+  position: absolute;
+  width: calc(15vw + 50px);
+  max-width: 400px;
+
+  &:nth-child(1) {
+    top: 330px;
+  }
+  &:nth-child(2) {
+    top: 660px;
+  }
+  &:nth-child(3) {
+    top: 500px;
+  }
+
+  img {
+    filter: opacity(0.5) drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.2));
+  }
+}
+
+
+.animate-right {
+  animation: move-right 120s linear infinite;
+}
+
+.animate-left {
+  animation: move-right 120s linear infinite reverse;
+}
+
+.sway {
+  transform-origin: bottom;
+  animation: sway 5s ease-in-out infinite;
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(calc(0px - (15vw + 50px)));
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
