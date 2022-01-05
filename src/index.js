@@ -13,6 +13,7 @@ import 'swiper/css/keyboard';
 import randomizeBattleships from './battleships';
 import randomizeTreeSway from './trees';
 import randomizeSmoke from './smoke';
+import setCurrentYear from './currentYear';
 Swiper.use([Navigation, Keyboard]);
 
 const swiper = new Swiper('.swiper', {
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
   setFirstSectionHeight();
   initSmoothScroll();
 
+  setCurrentYear();
   randomizeBattleships();
   randomizeTreeSway();
   randomizeSmoke();
