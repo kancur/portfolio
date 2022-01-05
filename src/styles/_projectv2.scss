@@ -17,6 +17,14 @@
     margin-bottom: 0.5rem;
   }
 
+  .subheading {
+    font-size: 1.4rem;
+    color: $gray;
+    @include breakpoint(sm) {
+      font-size: 1.7rem;
+    }
+  }
+
   h1 {
     font-family: "Source Code Pro";
     letter-spacing: -1px;
