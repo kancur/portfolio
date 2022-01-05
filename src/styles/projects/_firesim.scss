@@ -3,4 +3,74 @@
 
 #firesim {
   background: linear-gradient(90deg, #ff8217, #e74000);
+
+  .fire-tree {
+    position: absolute;
+
+    &:nth-child(1) {
+      width: 400px;
+      left: -400px;
+      bottom: 0;
+    }
+    &:nth-child(2) {
+      width: 500px;
+      right: -400px;
+      bottom: 0;
+    }
+  }
+
+  .smokewrap {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: -400px;
+    bottom: 230px;
+    filter: opacity(0.2);
+  }
+
+  .smokewrap2 {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    right: -350px;
+    bottom: 200px;
+    filter: opacity(0.2);
+  }
+  
+
+  .smoke {
+    position: absolute;
+    bottom: 0;
+    min-width: 400px;
+    animation: riseSmoke infinite 5s linear;
+    transform-origin: center;
+
+    &:nth-child(1) {
+      min-width: 300px;
+      transform: rotate(160deg);
+    }
+
+    &:nth-child(2) {
+      min-width: 450px;
+    }
+
+    &:nth-child(3) {
+      min-width: 360px;
+    }
+  }
+
+  @keyframes riseSmoke {
+    0% {
+      transform: translateY(0px) scale(0.6) rotate(0deg);
+      opacity: 0;
+      
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-200px) scale(1) rotate(30deg);
+      opacity: 0;
+    }
+  }
 }
