@@ -6,30 +6,38 @@
 }
 
 .battleship {
-  z-index: 5;
+  z-index: 10;
   position: absolute;
   width: calc(15vw + 50px);
   max-width: 400px;
 
   &:nth-child(1) {
     top: 330px;
+    z-index: 5;
   }
   &:nth-child(2) {
-    top: 660px;
+    top: 580px;
   }
   &:nth-child(3) {
-    top: 500px;
+    top: 550px;
+    z-index: 8;
   }
   &:nth-child(4) {
-    top: 400px;
+    top: 347px;
+    z-index: 6;
   }
   &:nth-child(5) {
     top: 180px;
+    z-index: 4;
+  }
+  &:nth-child(6) {
+    top: 55px;
+    z-index: 4;
   }
   
 
   img {
-    filter: opacity(0.5) drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.2));
   }
 }
 
