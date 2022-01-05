@@ -575,6 +575,33 @@ function setFirstSectionHeight(height) {
 
 /***/ }),
 
+/***/ "./src/smoke.js":
+/*!**********************!*\
+  !*** ./src/smoke.js ***!
+  \**********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ randomizeSmoke; }
+/* harmony export */ });
+function randomizeSmoke() {
+  const smokes = document.querySelectorAll('.smoke');
+  const maxDuration = 12;
+  const minDuration = 8;
+
+  for (let i = 0; i < smokes.length; i++) {
+    const animationDuration = Math.floor(Math.random() * (maxDuration - minDuration + 1) + minDuration);
+    
+    smokes[i].style.animationDuration = animationDuration
+    smokes[i].style.animationDelay = `${(-maxDuration/smokes.length) * i}s`;  
+  }
+}
+
+
+/***/ }),
+
 /***/ "./src/smoothscroll.js":
 /*!*****************************!*\
   !*** ./src/smoothscroll.js ***!
@@ -13242,6 +13269,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_css_keyboard__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! swiper/css/keyboard */ "./node_modules/swiper/modules/keyboard/keyboard.min.css");
 /* harmony import */ var _battleships__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./battleships */ "./src/battleships.js");
 /* harmony import */ var _trees__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./trees */ "./src/trees.js");
+/* harmony import */ var _smoke__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./smoke */ "./src/smoke.js");
+
 
 
 
@@ -13290,6 +13319,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   (0,_battleships__WEBPACK_IMPORTED_MODULE_11__["default"])();
   (0,_trees__WEBPACK_IMPORTED_MODULE_12__["default"])();
+  (0,_smoke__WEBPACK_IMPORTED_MODULE_13__["default"])();
 
   let windowWidth = window.innerWidth;
 

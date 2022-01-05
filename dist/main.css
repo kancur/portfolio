@@ -1511,11 +1511,14 @@ header .logo {
 }
 #najkempy .tree {
   position: absolute;
+  z-index: 10;
 }
 #najkempy .tree:nth-child(1) {
   left: -189px;
   bottom: -15px;
   width: 313px;
+  filter: brightness(0.9);
+  z-index: 5;
 }
 #najkempy .tree:nth-child(2) {
   left: -377px;
@@ -1526,6 +1529,8 @@ header .logo {
   left: -492px;
   bottom: -15px;
   width: 254px;
+  filter: brightness(0.9);
+  z-index: 5;
 }
 #najkempy .tree:nth-child(4) {
   left: -736px;
@@ -1546,6 +1551,8 @@ header .logo {
   right: -393px;
   bottom: -17px;
   width: 293px;
+  filter: brightness(0.9);
+  z-index: 5;
 }
 #najkempy .tree:nth-child(8) {
   right: -516px;
@@ -1556,6 +1563,8 @@ header .logo {
   right: -745px;
   bottom: -15px;
   width: 309px;
+  filter: brightness(0.95);
+  z-index: 5;
 }
 #najkempy .tree:nth-child(10) {
   right: -912px;
@@ -1566,34 +1575,111 @@ header .logo {
 #firesim {
   background: linear-gradient(90deg, #ff8217, #e74000);
 }
+#firesim .fire-tree {
+  position: absolute;
+}
+#firesim .fire-tree:nth-child(1) {
+  width: 400px;
+  left: -400px;
+  bottom: 0;
+}
+#firesim .fire-tree:nth-child(2) {
+  width: 500px;
+  right: -400px;
+  bottom: 0;
+}
+#firesim .smokewrap {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  left: -400px;
+  bottom: 230px;
+  filter: opacity(0.2);
+}
+#firesim .smokewrap2 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  right: -350px;
+  bottom: 200px;
+  filter: opacity(0.2);
+}
+#firesim .smoke {
+  position: absolute;
+  bottom: 0;
+  min-width: 400px;
+  -webkit-animation: riseSmoke infinite 5s linear;
+          animation: riseSmoke infinite 5s linear;
+  transform-origin: center;
+}
+#firesim .smoke:nth-child(1) {
+  min-width: 300px;
+  transform: rotate(160deg);
+}
+#firesim .smoke:nth-child(2) {
+  min-width: 450px;
+}
+#firesim .smoke:nth-child(3) {
+  min-width: 360px;
+}
+@-webkit-keyframes riseSmoke {
+  0% {
+    transform: translateY(0px) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px) scale(1) rotate(30deg);
+    opacity: 0;
+  }
+}
+@keyframes riseSmoke {
+  0% {
+    transform: translateY(0px) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px) scale(1) rotate(30deg);
+    opacity: 0;
+  }
+}
 
 #battleship {
   background: linear-gradient(90deg, #2077C4, #1069B5);
 }
 
 .battleship {
-  z-index: 5;
+  z-index: 10;
   position: absolute;
   width: calc(15vw + 50px);
   max-width: 400px;
 }
 .battleship:nth-child(1) {
   top: 330px;
+  z-index: 5;
 }
 .battleship:nth-child(2) {
-  top: 660px;
+  top: 580px;
 }
 .battleship:nth-child(3) {
   top: 500px;
+  z-index: 8;
 }
 .battleship:nth-child(4) {
   top: 400px;
+  z-index: 6;
 }
 .battleship:nth-child(5) {
   top: 180px;
+  z-index: 4;
 }
 .battleship img {
-  filter: opacity(0.5) drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.2));
 }
 
 .animate-right {
@@ -1653,6 +1739,15 @@ header .logo {
 #tunneler {
   background: linear-gradient(90deg, #c37930, #aa6119);
 }
+#tunneler .tunnelermap {
+  position: absolute;
+  min-width: 2400px;
+  top: -54px;
+  left: -735px;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated;
+}
 
 #toolsy {
   background: linear-gradient(90deg, #89ece3, #4fd1c5);
@@ -1668,16 +1763,33 @@ header .logo {
   width: 400px;
   left: -219px;
   top: -118px;
+  transform: rotate(22deg);
 }
-#memory-card .flower:nth-child(1) {
-  width: 400px;
-  left: -219px;
-  top: -118px;
+#memory-card .flower:nth-child(2) {
+  width: 272px;
+  right: -448px;
+  top: -107px;
 }
-#memory-card .flower:nth-child(1) {
+#memory-card .flower:nth-child(3) {
   width: 400px;
-  left: -219px;
-  top: -118px;
+  right: -238px;
+  top: 432px;
+}
+#memory-card .flower:nth-child(4) {
+  width: 364px;
+  left: -469px;
+  top: 332px;
+}
+#memory-card .flower:nth-child(5) {
+  width: 148px;
+  right: -539px;
+  top: 318px;
+}
+#memory-card .flower:nth-child(6) {
+  width: 122px;
+  left: -585px;
+  top: 100px;
+  transform: rotate(329deg);
 }
 
 .swiper {
