@@ -2,5 +2,10 @@
 @import '../variables';
 
 #toolsy {
-  background:  linear-gradient(90deg, #89ece3, #4fd1c5);;
+  background:  linear-gradient(90deg, #89ece3, #4fd1c5);
+
+  .logo {
+    max-width: 280px;
+    margin: auto;
+  }
 }
