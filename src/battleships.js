@@ -1,6 +1,6 @@
 export default function randomizeBattleships() {
   const battleships = document.querySelectorAll('.battleship');
-  const maxDuration = 250;
+  const maxDuration = 300;
   const minDuration = 80;
 
 
