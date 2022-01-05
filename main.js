@@ -529,6 +529,34 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/battleships.js":
+/*!****************************!*\
+  !*** ./src/battleships.js ***!
+  \****************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ randomizeBattleships; }
+/* harmony export */ });
+function randomizeBattleships() {
+  const battleships = document.querySelectorAll('.battleship');
+  const maxDuration = 300;
+  const minDuration = 80;
+
+
+  for (let i = 0; i < battleships.length; i++) {
+    const animationDuration = Math.floor(Math.random() * (maxDuration - minDuration + 1) + minDuration);
+    const randomDuration = Math.floor(Math.random() * animationDuration);
+    battleships[i].style.animationDuration = `${animationDuration}s`;
+    battleships[i].style.animationDelay = -randomDuration + 's';  
+  }
+}
+
+
+/***/ }),
+
 /***/ "./src/firstSectionHeightHandler.js":
 /*!******************************************!*\
   !*** ./src/firstSectionHeightHandler.js ***!
@@ -13189,6 +13217,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! swiper/css/navigation */ "./node_modules/swiper/modules/navigation/navigation.min.css");
 /* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! swiper/css/pagination */ "./node_modules/swiper/modules/pagination/pagination.min.css");
 /* harmony import */ var swiper_css_keyboard__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! swiper/css/keyboard */ "./node_modules/swiper/modules/keyboard/keyboard.min.css");
+/* harmony import */ var _battleships__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./battleships */ "./src/battleships.js");
+
 
 
 
@@ -13232,6 +13262,7 @@ document.addEventListener('DOMContentLoaded', function () {
   swiper.slideTo(1); */
   (0,_firstSectionHeightHandler__WEBPACK_IMPORTED_MODULE_5__["default"])();
   (0,_smoothscroll__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  (0,_battleships__WEBPACK_IMPORTED_MODULE_11__["default"])();
 
   let windowWidth = window.innerWidth;
 
