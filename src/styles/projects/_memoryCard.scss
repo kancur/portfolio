@@ -3,6 +3,46 @@
 
 #memory-card {
   background: linear-gradient(90deg, #d689c1, #ad4992);
-  
-}
 
+  .flower {
+    position: absolute;
+
+    &:nth-child(1) {
+      width: 400px;
+      left: -219px;
+      top: -118px;
+      transform: rotate(22deg);
+    }
+
+    &:nth-child(2) {
+      width: 272px;
+      right: -448px;
+      top: -107px;
+    }
+
+    &:nth-child(3) {
+      width: 400px;
+      right: -238px;
+      top: 432px;
+    }
+
+    &:nth-child(4) {
+      width: 364px;
+      left: -469px;
+      top: 332px;
+    }
+
+    &:nth-child(5) {
+      width: 148px;
+      right: -539px;
+      top: 318px;
+    }
+
+    &:nth-child(6) {
+      width: 122px;
+      left: -585px;
+      top: 100px;
+      transform: rotate(329deg);
+    }
+  }
+}
