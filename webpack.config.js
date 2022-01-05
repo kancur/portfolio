@@ -96,13 +96,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
-    /* new HtmlWebpackInlineSVGPlugin({
+    new HtmlWebpackInlineSVGPlugin({
       svgoConfig: [
         {
           removeViewBox: true,
         },
       ],
-    }), */
+    }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
