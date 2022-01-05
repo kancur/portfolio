@@ -1,5 +1,5 @@
-@import 'mixins';
-@import 'variables';
+@import '../mixins';
+@import '../variables';
 
 #battleship {
   background:linear-gradient(90deg, #2077C4, #1069B5);  
@@ -20,6 +20,13 @@
   &:nth-child(3) {
     top: 500px;
   }
+  &:nth-child(4) {
+    top: 400px;
+  }
+  &:nth-child(5) {
+    top: 180px;
+  }
+  
 
   img {
     filter: opacity(0.5) drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.2));
