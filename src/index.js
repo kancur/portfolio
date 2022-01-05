@@ -12,6 +12,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/keyboard';
 import randomizeBattleships from './battleships';
 import randomizeTreeSway from './trees';
+import randomizeSmoke from './smoke';
 Swiper.use([Navigation, Keyboard]);
 
 const swiper = new Swiper('.swiper', {
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   randomizeBattleships();
   randomizeTreeSway();
+  randomizeSmoke();
 
   let windowWidth = window.innerWidth;
 
