@@ -3,4 +3,13 @@
 
 #tunneler {
   background: linear-gradient(90deg, #c37930, #aa6119);
+
+  .tunnelermap {
+    position: absolute;
+    min-width: 2400px;
+    //height: 1800px;
+    top: -54px;
+    left: -735px;
+    image-rendering: pixelated;
+  }
 }
