@@ -1,10 +1,11 @@
 @use 'reset';
 @use 'variables' as *;
+@use 'utils';
 @use 'nav';
+@use 'footer';
 @use 'header';
 @use 'project';
 @use 'projectv2';
-@use 'utils';
 @use 'animations';
 @use './projects/najkempy';
 @use './projects/firesim';
@@ -13,6 +14,7 @@
 @use './projects/toolsy';
 @use './projects/memoryCard';
 @use './projects/simple-todo';
+@use './projects/react-cart';
 @use 'swiper';
 @use 'buttons';
 @import 'mixins';
