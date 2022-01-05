@@ -46,6 +46,24 @@
     transform: rotate(346deg);
   }
 
+
+  .animate-sway-tree {
+    transform-origin: bottom;
+    animation: sway-tree 5s ease-in-out infinite;
+  }
+
+  @keyframes sway-tree {
+    0% {
+      transform: skewX(-0.8deg);
+    }
+    50% {
+      transform: skewX(0.8deg);
+    }
+    100% {
+      transform: skewX(-0.8deg);
+    }
+  }
+
   .tree {
     position: absolute;
     //filter: opacity(0.3);

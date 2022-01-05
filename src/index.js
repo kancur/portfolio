@@ -11,6 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/keyboard';
 import randomizeBattleships from './battleships';
+import randomizeTreeSway from './trees';
 Swiper.use([Navigation, Keyboard]);
 
 const swiper = new Swiper('.swiper', {
@@ -42,7 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
   swiper.slideTo(1); */
   setFirstSectionHeight();
   initSmoothScroll();
+
   randomizeBattleships();
+  randomizeTreeSway();
 
   let windowWidth = window.innerWidth;
 
