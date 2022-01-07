@@ -16,8 +16,6 @@ header {
   }
 }
 
-
-
 .header-content {
   display: flex;
   flex-direction: column;
@@ -51,6 +49,11 @@ header {
         font-size: 3rem;
       }
     }
+  }
+
+
+  .view-portfolio-wrapper {
+    font-size: 20px;
   }
 
   .arrow-down-wrapper > * {
