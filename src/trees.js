@@ -1,3 +1,6 @@
+/**
+ * Adds random delay to the tree sway animation on each tree
+ */
 export default function randomizeTreeSway() {
   const trees = document.querySelectorAll('.tree');
 
