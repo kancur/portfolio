@@ -43,7 +43,7 @@
           <h1 id="page-heading">I'm Peter, a Junior Web Developer</h1>
         </div>
         <a data-nav href="#portfolio" class="arrow-down-wrapper">
-          <div>
+          <div class="view-portfolio-wrapper">
             <p>View Portfolio</p>
             <img inline class="arrow-down" src="./assets/icons/arrow-down.svg" />
           </div>
@@ -52,6 +52,7 @@
     </header>
 
     <main id="portfolio">
+      
       <section id="najkempy" class="projectv2">
         <div class="custom-shape-divider-top">
           <svg
@@ -80,15 +81,15 @@
           <img inline class="decoration tree animate-sway-tree" src="assets/najkempy/conifer2.svg" />
 
           <div class="wrap">
-            <img class="logo" src="./assets/icons/najkempy-logo.png" />
-            <h1>Slovak campsite directory</h1>
+            <h1 class="logo">
+              <img src="./assets/icons/najkempy-logo.png" />
+            </h1>
+            <p class="subheading">Slovak campsite directory made in Next.js</p>
 
             <div class="swiper">
               <div class="gradient"></div>
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="./assets/images/najkempy1.jpg" />
-                </div>
+
                 <div class="swiper-slide">
                   <img src="./assets/images/najkempy2.jpg" />
                 </div>
@@ -199,7 +200,6 @@
           </svg>
         </div>
 
-
         <div class="decoration-wrap">
           <img src="assets/forestfire/tree2.svg" class="decoration fire-tree" />
           <img src="assets/forestfire/tree1.png" class="decoration fire-tree" />
@@ -217,7 +217,7 @@
           </div>
 
           <div class="wrap">
-            <h1>Forest Fire Simulator</h1>
+            <h1 class="heading">Forest Fire Simulator</h1>
 
             <div class="swiper">
               <div class="gradient"></div>
@@ -335,7 +335,7 @@
         </div>
 
         <div class="wrap">
-          <h1>Battleship Game</h1>
+          <h1 class="heading">Battleship Game</h1>
 
           <div class="swiper">
             <div class="gradient"></div>
@@ -422,7 +422,7 @@
         <div class="decoration-wrap">
           <img src="assets/tunneler/tunnelermap.png" class="decoration tunnelermap" />
           <div class="wrap">
-            <h1>Tunneler Remake (Online Multiplayer)</h1>
+            <h1 class="heading">Tunneler Remake (Online Multiplayer)</h1>
 
             <div class="swiper">
               <div class="gradient"></div>
@@ -523,8 +523,10 @@
         </div>
 
         <div class="wrap">
-          <img class="logo" src="./assets/icons/Toolsy.png" />
-          <h1 class="subheading">Various online tools made in Preact</h1>
+          <h1 class="logo">
+            <img src="./assets/icons/Toolsy.png" />
+          </h1>
+          <p class="subheading">Various online tools made in Preact</p>
 
           <div class="swiper">
             <div class="gradient"></div>
@@ -566,7 +568,7 @@
                   <img inline class="tech-stack-icon" src="assets/icons/webpack.svg" />
                   Webpack
                 </li>
-                <li data-aos="fade" data-aos-delay="500">
+                <li data-aos="fade" data-aos-delay="650">
                   <img inline class="tech-stack-icon" src="assets/icons/wodpress.svg" />
                   Wordpress
                 </li>
@@ -603,12 +605,13 @@
               Github Repo (Frontend)
             </a>
             <a
-              href="https://github.com/kancur/emailsverified_bknd"
+              data-nav
+              href="#contact"
               target="_blank"
               class="button github-button"
             >
               <img inline src="assets/icons/github.svg" class="btn-icon" />
-              Github Repo (Backend)
+              Contact me for access to backend repo
             </a>
             <a href="https://toolsy.dev/" target="_blank" class="button visit-button">
               <img inline src="assets/icons/link.svg" class="btn-icon" />
@@ -648,7 +651,7 @@
           <img class="decoration flower" src="./assets/memorycard/blueflower.png" />
           <img class="decoration flower" src="./assets/memorycard/blueflower.png" />
           <div class="wrap">
-            <h1>Flower Memory Card Game</h1>
+            <h1 class="heading">Flower Memory Card Game</h1>
 
             <div class="swiper">
               <div class="gradient"></div>
@@ -680,7 +683,7 @@
                     <img inline class="tech-stack-icon" src="assets/icons/css3.svg" />
                     CSS
                   </li>
-                  <li data-aos="fade" data-aos-delay="350">
+                  <li data-aos="fade" data-aos-delay="500">
                     <img inline class="tech-stack-icon" src="assets/icons/React-icon.svg" />
                     React
                   </li>
@@ -731,7 +734,7 @@
         </div>
 
         <div class="wrap">
-          <h1>Simple Todo App</h1>
+          <h1 class="heading">Simple Todo App</h1>
 
           <div class="swiper">
             <div class="gradient"></div>
@@ -773,9 +776,9 @@
           <div class="infoblock">
             <h2>Project Description:</h2>
             <p>
-              A simple frontend-only todo app made in vanilla JS. State is saved/loaded from localstorage for local task persistence.
+              A simple frontend-only todo app made in vanilla JS. State is saved/loaded from localstorage for
+              local task persistence.
             </p>
-
           </div>
           <div class="buttons">
             <a href="https://github.com/kancur/Simple-Todo-App" target="_blank" class="button github-button">
@@ -813,7 +816,7 @@
         </div>
 
         <div class="wrap">
-          <h1>Simple React Shopping Cart</h1>
+          <h1 class="heading">Simple React Shopping Cart</h1>
 
           <div class="swiper">
             <div class="gradient"></div>
@@ -845,7 +848,7 @@
                   <img inline class="tech-stack-icon" src="assets/icons/css3.svg" />
                   CSS
                 </li>
-                <li data-aos="fade" data-aos-delay="200">
+                <li data-aos="fade" data-aos-delay="500">
                   <img inline class="tech-stack-icon" src="assets/icons/React-icon.svg" />
                   React
                 </li>
@@ -854,10 +857,7 @@
           </div>
           <div class="infoblock">
             <h2>Project Description:</h2>
-            <p>
-              A simple shopping cart made in React.
-            </p>
-
+            <p>A simple shopping cart made in React.</p>
           </div>
           <div class="buttons">
             <a href="https://github.com/kancur/shopping-cart" target="_blank" class="button github-button">
@@ -872,10 +872,111 @@
         </div>
       </section>
 
+      <section id="about" class="window-height">
+        <div class="about-wrap">
+          <div class="whoami">
+            <h1>Who am I?</h1>
+            <p>
+              Hi! I'm Peter, a junior javascript developer. I've always been close to programming, but never
+              in a professional way.
+            </p>
+            <p>
+              I first started learning basics of coding as a kid on a ZX spectrum machine. Later, I attended
+              a secondary grammar school with a focus on programming.
+            </p>
+            <p>
+              After school, I started creating websites, optimising them for search engines, and monetising them.
+              I learnt a lot of html and css in the process.
+            </p>
+          </div>
+          <div>
+            <h2>My previous experience / timeline</h2>
+            <div class="timeline">
+              <span class='timeline-line'></span>
+              <div class="container right">
+                <div class="content">
+                  <p class="year">~2005</p>
+                  <p>First tries with programming in Basic on a Didaktik ZX spectrum machine</p>
+                </div>
+              </div>
+              <div class="container left">
+                <div class="content">
+                  <p class="year">2014</p>
+                  <p>Finished secondary education with a focus on programming and informatics</p>
+                </div>
+              </div>
+              <div class="container right">
+                <div class="content">
+                  <p class="year">2014</p>
+                  <p>Started creating wordpress websites, focusing on SEO, ranking and monetization.</p>
+                  <p>
+                    Became very familiar with html and css and SEO. Off course, I've came across a bit of
+                    javascript as well.
+                  </p>
+                </div>
+              </div>
+              <div class="container left">
+                <div class="content">
+                  <p class="year">2015</p>
+                  <p>
+                    Occasionally, I've used python to automate some stuff (e.g. keyword density computation)
+                    and I liked it!
+                  </p>
+                </div>
+              </div>
+              <div class="container right">
+                <div class="content">
+                  <p class="year">2018 June</p>
+                  <p>Started working as a Customer Support Specialist at Mangools</p>
+                </div>
+              </div>
+              <div class="container left">
+                <div class="content">
+                  <p class="year">2020 April</p>
+                  <p>Finished working at Mangools</p>
+                </div>
+              </div>
+              <div class="container right">
+                <div class="content">
+                  <p class="year">2021 August</p>
+                  <p>Decided to become a developer with a focus on Javascript. Active learning started.</p>
+                </div>
+              </div>
+              <div class="container left">
+                <div class="content">
+                  <p class="year">2022 January</p>
+                  <p>Had a blast learning Javascript for the past few months! Portfolio website released. Neverending learning begins🙂</p>
+                </div>
+              </div>
+              <div class="container right">
+                <div class="content">
+                  <p class="year">What's next?</p>
+                  <a data-nav href="#contact">Contact me</a><span> 👋</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section id="contact">
+        <div class="contact-wrap">
+          <div>
+            <h1>Contact me</h1>
+            <p><span>Email: </span><a href="mailto:petosmid@gmail.com">petosmid@gmail.com</a></p>
+          </div>
+          <div>
+            <h2>Find me on</h2>
+            <p>
+              <a href="https://www.linkedin.com/in/peter-smid-sk/">LinkedIn</a>
+            </p>
+            <p>
+              <a href="https://github.com/kancur">GitHub</a>
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-      Peter Smid &nbsp;<span class="current-year"></span>
-    </footer>
+    <footer>Peter Smid &nbsp;<span class="current-year"></span></footer>
   </body>
 </html>
