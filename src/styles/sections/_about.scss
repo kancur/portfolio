@@ -1,0 +1,157 @@
+@use '../variables' as *;
+@import '../mixins';
+
+#about {
+  background: $primary;
+  overflow: hidden;
+  padding: 2rem 1rem;
+  font-size: 20px;
+  --contentBg: #fafafa;
+
+  h1, h2 {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    @include breakpoint(sm) {
+      font-size: 4rem;
+    }
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .whoami {
+    margin: auto;
+    max-width: 800px;
+    text-align: left;
+  }
+
+  .about-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .timeline {
+    color: rgb(48, 48, 48);
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .timeline-line {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: var(--contentBg);
+      top:30px;
+      bottom: -150px;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .container {
+      //padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        right: -12px;
+        background-color: #e06c75;
+        top: 22px;
+        border-radius: 50%;
+        border: solid var(--contentBg) 5px;
+        z-index: 1;
+      }
+    }
+
+
+/*     &:after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: var(--contentBg);
+      top:30px;
+      bottom: -150px;
+      left: 50%;
+      margin-left: -3px;
+    } */
+  }
+  .left {
+    left: 0;
+    padding: 10px 25px 10px 0px;
+
+    &:before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 24px;
+      width: 0;
+      z-index: 1;
+      right: 16px;
+      border: medium solid var(--contentBg);
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent var(--contentBg);
+    }
+  }
+  
+  .right {
+    left: 50%;
+    padding: 10px 0px 10px 25px;
+
+    &:after {
+      left: -12px;
+    }
+
+    &:before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 24px;
+      width: 0;
+      z-index: 1;
+      left: 16px;
+      border: medium solid var(--contentBg);
+      border-width: 10px 10px 10px 0;
+      border-color: transparent var(--contentBg) transparent transparent;
+    }
+  }
+
+  .content {
+    padding: 0.7rem 1rem;
+    background-color: var(--contentBg);
+    position: relative;
+    border-radius: 12px;
+    @include breakpoint(sm) {
+      padding: 1rem 1.5rem;
+    }
+
+    .year {
+      font-size: 1.8rem;
+      line-height: 1;
+      text-align: left;
+      font-weight: 700;
+      color: #e06c75;
+      margin-bottom: 1rem;
+
+      @include breakpoint(sm) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+
+}
