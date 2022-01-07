@@ -15,6 +15,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import setTimelineHeight from './timeline';
 import slideSwipers from './slideSwipers';
+import setAosDelays from './aosDelays';
 Swiper.use([Navigation, Keyboard]);
 
 const swiper = new Swiper('.swiper', {
@@ -57,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
   setFirstSectionHeight();
   initSmoothScroll();
 
+  setAosDelays();
   setCurrentYear();
   randomizeBattleships();
   randomizeTreeSway();
