@@ -2,11 +2,15 @@
 @import '../mixins';
 
 #contact {
-  color: #e2e2e2;
+  color: #424242;
   padding: 3rem 2rem;
-  background-color: #282c34;
+  background: linear-gradient(286deg, #bec6d0, #dfebfd);
   font-size: 20px;
-  
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  align-content: center;
 
   @include breakpoint(lg) {
     font-size: 22px;
@@ -18,18 +22,19 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-
+    gap: 4rem;
   }
 
   p {
     margin-bottom: 0.4rem;
-    font-family: "Source Code Pro";
-    
+    font-family: 'Source Code Pro';
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 2.5rem;
+    font-weight: 700;
+    color: #e06c75;
     margin-bottom: 0.8rem;
     @include breakpoint(sm) {
       font-size: 3rem;
@@ -37,4 +42,13 @@
     }
   }
 
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .contact-icon {
+      height: 75px;
+    }
+  }
 }
