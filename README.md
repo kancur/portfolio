@@ -11,6 +11,7 @@ My static portfolio website.
 <a href="https://webpack.js.org/" title="webpack"><img src="https://github.com/get-icon/geticon/raw/master/icons/webpack.svg" alt="webpack" width="21px" height="21px"></a> Webpack  
 
 ## Screenshot
+<kbd>![portfolio1](https://user-images.githubusercontent.com/49352605/148754177-e80d28bf-86d3-4416-bece-6ff252caa941.png)</kbd>
 
 ## Get in Touch With me
 🔗 Check out my [portfolio](https://petersmid.com)  
