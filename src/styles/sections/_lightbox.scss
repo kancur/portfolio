@@ -1,0 +1,43 @@
+@use '../variables' as *;
+@import '../mixins';
+
+.lightbox {
+  display: none;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0 0 0 / 65%);
+  backdrop-filter: blur(6px);
+
+  @include breakpoint(sm) {
+    padding: 2rem;
+  }
+
+  @include breakpoint(lg) {
+    padding: 3rem;
+  }
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  &.show {
+    display: flex;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.75rem;
+    cursor: pointer;
+    width: 75px;
+  }
+}
