@@ -29,6 +29,7 @@
 
 .decoration {
   display: none;
+  user-select: none;
   @include breakpoint(lg) {
     display: block;
   }
