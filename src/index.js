@@ -16,6 +16,8 @@ import 'aos/dist/aos.css';
 import setTimelineHeight from './timeline';
 import slideSwipers from './slideSwipers';
 import setAosDelays from './aosDelays';
+import addRandomIconsToolsy from './toolsy';
+import attachLightBoxListeners from './lightbox';
 Swiper.use([Navigation, Keyboard]);
 
 const swiper = new Swiper('.swiper', {
@@ -63,6 +65,9 @@ document.addEventListener('DOMContentLoaded', function () {
   randomizeBattleships();
   randomizeTreeSway();
   randomizeSmoke();
+  addRandomIconsToolsy();
+
+  attachLightBoxListeners();
 
   setTimeout(() => {
     setTimelineHeight();
