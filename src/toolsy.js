@@ -14,8 +14,6 @@ export default function addRandomIconsToolsy() {
     icon.style.transform = `rotate(${randomInt(-360,360)}deg)`;
     wrapper.appendChild(icon);
   }
-  
-
 }
 
 function randomInt(min, max) { 
