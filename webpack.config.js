@@ -99,7 +99,7 @@ module.exports = {
     new HtmlWebpackInlineSVGPlugin({
       svgoConfig: [
         {
-          removeViewBox: true,
+          removeViewBox: false,
         },
       ],
     }),
