@@ -1,4 +1,5 @@
 import MobileMenu from "./MobileMenu";
+import NavBar from "./NavBar";
 
 export default function attachLightBoxListeners() {
   const lightBox = new Lightbox();
@@ -29,12 +30,12 @@ class Lightbox {
     document.body.style.position = '';
     document.body.style.top = '';
     window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    MobileMenu.unfreeze()
+    NavBar.unfreeze()
 
   }
 
   show(src) {
-    MobileMenu.freeze()
+    NavBar.freeze()
     this.lightboxImage.src = src;
     this.lightbox.classList.add('show');
     
