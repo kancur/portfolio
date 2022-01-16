@@ -5,6 +5,7 @@ const TIMEOUT = 3000;
 
 class NavBar {
   constructor() {
+    this.isFrozen = false;
     this.navbar = document.querySelector('#nav-wrap');
     this.lastScrollPosition = document.body.scrollHeight;
     this.delta = 0;
@@ -13,6 +14,8 @@ class NavBar {
 
   init() {
     window.addEventListener('scroll', () => {
+      if (this.isFrozen) return;
+      
       const currentScrollPos = window.pageYOffset;
 
       if (currentScrollPos > this.lastScrollPosition) {
@@ -38,6 +41,14 @@ class NavBar {
 
       this.lastScrollPosition = currentScrollPos;
     });
+  }
+
+  freeze() {
+    this.isFrozen = true;
+  }
+
+  unfreeze() {
+    this.isFrozen = false;
   }
 }
 
