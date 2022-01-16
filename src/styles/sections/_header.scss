@@ -1,5 +1,5 @@
-@use 'variables' as *;
-@import 'mixins';
+@use '../variables' as *;
+@import '../mixins';
 
 header {
   height: 100vh;
@@ -54,6 +54,10 @@ header {
 
   .view-portfolio-wrapper {
     font-size: 20px;
+    transition: transform 0.15s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   .arrow-down-wrapper > * {
