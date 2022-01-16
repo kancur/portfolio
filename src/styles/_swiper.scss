@@ -16,6 +16,10 @@
     text-shadow: 0 0 2px #00000099;
   }
   
+  .swiper-button-disabled {
+    display: none;
+  }
+  
   .gradient {
     display: none;
     background: linear-gradient(
