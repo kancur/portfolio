@@ -19,10 +19,9 @@
   font-family: $font-mono;
   transition: transform 0.5s ease-in-out;
 
-  &.show{
+  &.show {
     transform: translate(0, 0);
   }
-
 
   @include breakpoint(sm) {
     flex-direction: row;
@@ -103,5 +102,10 @@ nav {
 .show-mobile-menu {
   transform: scale(1);
   opacity: 1;
-  background-color: #312e52
+  background-color: #312e52;
+  padding: 1.2rem 0.7rem;
+}
+
+.show-mobile-menu ul {
+  gap: 0.8rem;
 }
