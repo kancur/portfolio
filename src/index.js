@@ -44,19 +44,21 @@ const swiper = new Swiper('.swiper', {
 
 smoothscroll.polyfill();
 
+AOS.init({
+  offset: 30,
+  once: true,
+  startEvent: 'DOMContentLoaded',
+});
+
 document.addEventListener('DOMContentLoaded', function () {
-  AOS.init({
-    offset: 60,
-    once: true,
-  });
-  setTimeout(() => {
-    AOS.refresh();
-  }, 300);
+
 
   setTimeout(() => {
-    slideSwipers(1)
-  },500)  
+    slideSwipers(1);
+  }, 500);
 
+  const resizeObserver = new ResizeObserver(() => AOS.refreshHard());
+  resizeObserver.observe(document.body);
 
   /* const swiper = document.querySelector('.swiper').swiper;
   swiper.slideTo(1); */
@@ -72,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   attachLightBoxListeners();
 
-
   setTimeout(() => {
     setTimelineHeight();
   }, 500);
@@ -87,5 +88,4 @@ document.addEventListener('DOMContentLoaded', function () {
     setFirstSectionHeight(window.innerHeight);
     setTimelineHeight();
   });
-
 });
