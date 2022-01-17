@@ -1,4 +1,4 @@
-const INITIAL_DELAY = 100;
+const INITIAL_DELAY = 0;
 const DIFFERENCE = 150;
 
 export default function setAosDelays(){
