@@ -1,4 +1,5 @@
 import MobileMenu from './MobileMenu';
+import ReducedMotionHandler from './ReducedMotionHandler';
 
 const MIN_SCROLL_DETECTION = 100; // px
 const TIMEOUT = 3000;
@@ -10,11 +11,15 @@ class NavBar {
     this.lastScrollPosition = document.body.scrollHeight;
     this.delta = 0;
     setTimeout(this.init(), TIMEOUT);
+    ReducedMotionHandler.registerCallback(() => {
+      this.navbar.classList.add('show');
+    })
   }
 
   init() {
     window.addEventListener('scroll', () => {
       if (this.isFrozen) return;
+      if (ReducedMotionHandler.isReducedMotion) return;
       
       const currentScrollPos = window.pageYOffset;
 
