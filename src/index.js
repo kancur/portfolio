@@ -20,6 +20,7 @@ import addRandomIconsToolsy from './scripts/toolsy';
 import attachLightBoxListeners from './scripts/lightbox';
 import MobileMenu from './scripts/MobileMenu';
 import NavBar from './scripts/NavBar';
+import ReducedMotionHandler from './scripts/ReducedMotionHandler';
 
 Swiper.use([Navigation, Keyboard]);
 
@@ -48,11 +49,12 @@ AOS.init({
   offset: 30,
   once: true,
   startEvent: 'DOMContentLoaded',
+  disable: () => {
+    return ReducedMotionHandler.isReducedMotion;
+  },
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-
-
   setTimeout(() => {
     slideSwipers(1);
   }, 500);
