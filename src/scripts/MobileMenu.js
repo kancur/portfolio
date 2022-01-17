@@ -7,7 +7,7 @@ class MobileMenu {
 
   init() {
     this.hamburger.addEventListener('click', () => this.toggle());
-    this.nav.addEventListener('click', () => this.toggle());
+    this.nav.addEventListener('click', () => this.hide());
   }
 
   toggle = () => {
