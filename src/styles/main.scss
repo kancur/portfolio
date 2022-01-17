@@ -4,8 +4,8 @@
 @use 'nav';
 @use './sections/footer';
 @use './sections/header';
+@use 'tech-stack';
 @use 'project';
-@use 'projectv2';
 @use 'animations';
 @use './projects/najkempy';
 @use './projects/firesim';
@@ -19,6 +19,7 @@
 @use './sections/contact';
 @use './sections/about';
 @use './sections/lightbox';
+@use './toasts';
 @use 'swiper';
 @use 'buttons';
 @import 'mixins';
