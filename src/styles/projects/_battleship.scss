@@ -48,11 +48,15 @@
 
 .animate-left {
   animation: move-right 120s linear infinite reverse;
+  
 }
 
 .sway {
   transform-origin: bottom;
   animation: sway 5s ease-in-out infinite;
+  @include reducedMotion{
+    animation: none;
+  }
 }
 
 @keyframes move-right {
