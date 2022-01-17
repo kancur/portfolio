@@ -6,6 +6,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "dev": "webpack serve --no-hot --live-reload",
+    "dev-no-reload": "webpack serve --no-hot",
     "devhot": "webpack serve --hot",
     "watch": "webpack watch",
     "build": "webpack",
