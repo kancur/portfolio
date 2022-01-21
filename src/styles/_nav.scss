@@ -11,13 +11,20 @@
   flex-wrap: wrap;
   align-items: center;
   position: fixed;
-  background-color: #3b33a6c7;
-  backdrop-filter: blur(14px);
   box-shadow: 0 0 10px #534ace8f;
   z-index: 1000;
   justify-content: space-between;
   font-family: $font-mono;
   transition: transform 0.5s ease-in-out;
+
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    backdrop-filter: blur(14px);
+    background-color: #3b33a6c7;
+  }
+
+  @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    background-color: #3b33a6;
+  }
 
   &.show {
     transform: translate(0, 0);
