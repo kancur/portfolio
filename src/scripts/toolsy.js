@@ -5,7 +5,7 @@ export default function addRandomIconsToolsy() {
 
   for (let i = 0; i < NUMBER_OF_ICONS; i++) {
     const icon = document.createElement('img');
-    icon.src = '/toolsy-icon.png';
+    icon.src = 'toolsy-icon.png';
     icon.classList.add('decoration', 'toolsy-icon');
 
     icon.style.width = `${randomInt(10, 100)}px`;
@@ -14,8 +14,6 @@ export default function addRandomIconsToolsy() {
     icon.style.transform = `rotate(${randomInt(-360,360)}deg)`;
     wrapper.appendChild(icon);
   }
-  
-
 }
 
 function randomInt(min, max) { 

@@ -1,5 +1,5 @@
-const INITIAL_DELAY = 100;
-const DIFFERENCE = 150;
+const INITIAL_DELAY = 0;
+const DIFFERENCE = 100;
 
 export default function setAosDelays(){
   const techStacks = document.querySelectorAll('.techstack');

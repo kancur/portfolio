@@ -1,23 +1,27 @@
 import smoothscroll from 'smoothscroll-polyfill';
 import './styles/main.scss';
-import initSmoothScroll from './smoothscroll';
-import setFirstSectionHeight from './firstSectionHeightHandler';
+import initSmoothScroll from './scripts/smoothscroll';
+import setFirstSectionHeight from './scripts/firstSectionHeightHandler';
 import Swiper, { Keyboard, Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/keyboard';
-import randomizeBattleships from './battleships';
-import randomizeTreeSway from './trees';
-import randomizeSmoke from './smoke';
-import setCurrentYear from './currentYear';
+import randomizeBattleships from './scripts/battleships';
+import randomizeTreeSway from './scripts/trees';
+import randomizeSmoke from './scripts/smoke';
+import setCurrentYear from './scripts/currentYear';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import setTimelineHeight from './timeline';
-import slideSwipers from './slideSwipers';
-import setAosDelays from './aosDelays';
-import addRandomIconsToolsy from './toolsy';
-import attachLightBoxListeners from './lightbox';
+import setTimelineHeight from './scripts/timeline';
+import slideSwipers from './scripts/slideSwipers';
+import setAosDelays from './scripts/aosDelays';
+import addRandomIconsToolsy from './scripts/toolsy';
+import attachLightBoxListeners from './scripts/lightbox';
+import MobileMenu from './scripts/MobileMenu';
+import NavBar from './scripts/NavBar';
+import ReducedMotionHandler from './scripts/ReducedMotionHandler';
+
 Swiper.use([Navigation, Keyboard]);
 
 const swiper = new Swiper('.swiper', {
@@ -41,19 +45,22 @@ const swiper = new Swiper('.swiper', {
 
 smoothscroll.polyfill();
 
+AOS.init({
+  offset: 30,
+  once: true,
+  startEvent: 'DOMContentLoaded',
+  disable: () => {
+    return ReducedMotionHandler.isReducedMotion;
+  },
+});
+
 document.addEventListener('DOMContentLoaded', function () {
-  AOS.init({
-    offset: 60,
-    once: true,
-  });
   setTimeout(() => {
-    AOS.refresh();
-  }, 300);
+    slideSwipers(1);
+  }, 500);
 
-  setTimeout(() => {
-    slideSwipers(1)
-  },500)  
-
+  const resizeObserver = new ResizeObserver(() => AOS.refreshHard());
+  resizeObserver.observe(document.body);
 
   /* const swiper = document.querySelector('.swiper').swiper;
   swiper.slideTo(1); */
@@ -77,21 +84,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('resize', () => {
     // only fire if the width has changed -- dont resize on mobile address bar hide/show
+    MobileMenu.hide();
     if (window.innerWidth === windowWidth) return;
     windowWidth = window.innerWidth;
     setFirstSectionHeight(window.innerHeight);
     setTimelineHeight();
   });
-
-  const hamburger = document.querySelector('#hamburger');
-  const nav = document.querySelector('nav');
-
-  hamburger.addEventListener('click', () => toggleMenu());
-
-  nav.addEventListener('click', () => toggleMenu());
-
-  const toggleMenu = () => {
-    hamburger.classList.toggle('is-active');
-    nav.classList.toggle('show-mobile-menu');
-  };
 });

@@ -3,9 +3,9 @@
 @use 'utils';
 @use 'nav';
 @use './sections/footer';
-@use 'header';
+@use './sections/header';
+@use 'tech-stack';
 @use 'project';
-@use 'projectv2';
 @use 'animations';
 @use './projects/najkempy';
 @use './projects/firesim';

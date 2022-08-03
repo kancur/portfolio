@@ -39,6 +39,9 @@
   
 
   .smoke {
+    @include reducedMotion{
+      animation: none;
+    }
     position: absolute;
     bottom: 0;
     min-width: 400px;

@@ -2,15 +2,33 @@
 @import 'mixins';
 
 .nav-wrapper {
+  transform: translate(0, -80px);
+  height: 78px;
   width: 100%;
   padding: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  position: absolute;
+  position: fixed;
+  box-shadow: 0 0 10px #534ace8f;
+  z-index: 1000;
   justify-content: space-between;
   font-family: $font-mono;
+  transition: transform 0.5s ease-in-out;
+
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    backdrop-filter: blur(14px);
+    background-color: #3b33a6c7;
+  }
+
+  @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    background-color: #3b33a6;
+  }
+
+  &.show {
+    transform: translate(0, 0);
+  }
 
   @include breakpoint(sm) {
     flex-direction: row;
@@ -91,4 +109,10 @@ nav {
 .show-mobile-menu {
   transform: scale(1);
   opacity: 1;
+  background-color: #312e52;
+  padding: 1.2rem 0.7rem;
+}
+
+.show-mobile-menu ul {
+  gap: 0.8rem;
 }

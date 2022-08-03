@@ -41,6 +41,9 @@
   }
 
   .animate-sway-tree {
+    @include reducedMotion{
+      animation: none;
+    }
     transform-origin: bottom;
     animation: sway-tree 5s ease-in-out infinite;
   }
