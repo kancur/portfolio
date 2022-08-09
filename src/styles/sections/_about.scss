@@ -135,11 +135,15 @@
       background-color: #dda507;
       color: white;
       font-weight: 600;
-      font-size: 22px;
-      padding: 7px 14px;
+      font-size: 17px;
+      padding: 4px 8px;
       border-radius: 10px;
       rotate: 6deg;
       box-shadow: #4f3a0052 3px 2px 6px;
+      @include breakpoint(sm) {
+        font-size: 22px;
+        padding: 7px 14px;
+      }
     }
 
 
