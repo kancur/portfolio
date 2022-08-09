@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <title>Peter Smid - Web Developer</title>
-    <meta name="description" content="Peter Smid - A Junior Web Developer with experience in SEO" />
+    <meta name="description" content="Peter Smid - A Frontend Developer with experience in SEO" />
     <meta name="author" content="Peter Smid" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.petersmid.sk/">
     <meta property="og:title" content="Peter Smid - Junior Web Developer">
-    <meta property="og:description" content="Peter Smid - A Junior Web Developer with experience in SEO">
+    <meta property="og:description" content="Peter Smid - A Frontend Developer with experience in SEO">
     <meta property="og:image" content="./assets/images/petersmid-featured.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.petersmid.sk/">
-    <meta property="twitter:title" content="Peter Smid - Junior Web Developer">
-    <meta property="twitter:description" content="Peter Smid - A Junior Web Developer with experience in SEO">
+    <meta property="twitter:title" content="Peter Smid - A Frontend Developer with experience in SEO">
+    <meta property="twitter:description" content="Check out my portfolio website">
     <meta property="twitter:image" content="./assets/images/petersmid-featured.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
@@ -56,7 +56,7 @@
       <div class="header-content">
         <div class="intro">
           <p class="pre-heading">Welcome!</p>
-          <h1 id="page-heading">I'm Peter, a Javascript Developer</h1>
+          <h1 id="page-heading">I'm Peter, a Frontend Developer</h1>
         </div>
         <a data-nav href="#portfolio" class="arrow-down-wrapper">
           <div class="view-portfolio-wrapper">
@@ -298,7 +298,7 @@
               <p>
                 A simple app simulating a forest fire (not a thermodynamic simulation, but a game-like
                 approximation). Built to improve my OOP skills. The visual part was done in
-                <a href="https://pixijs.com/">PIXI.js</a> and runs in WebGL.
+                <a href="https://pixijs.com/">PIXI.js</a> and runs in WebGL (falls back to canvas if unsupported).
               </p>
             </div>
             <div class="buttons">
@@ -448,7 +448,7 @@
           <img src="assets/tunneler/tunnelermap.png" class="decoration tunnelermap" />
           <div class="wrap">
             <h1 class="heading">Tunneler Remake</h1>
-            <p class="subheading">Tunneler remake featuring an online multiplayer</p>
+            <p class="subheading">Tunneler remake with an online multiplayer</p>
 
             <div class="swiper">
               <div class="gradient"></div>
@@ -497,11 +497,13 @@
             <div class="infoblock">
               <h2>Project Description:</h2>
               <p>
-                A remake of the classic DOS game Tunneler with an added feature of an online multiplayer. The
+                A remake of the classic DOS game named Tunneler. While original tunneler only had a split-screen multiplayer, this one has an online multiplayer. The
                 main purpose was to get familiar with websockets and canvas.
 
-                <!-- The tricky part is the implementation of the multiplayer. Since the game renders only 17 times per second, and tanks move
-              exactly one pixel per frame, it is not possible to use timedelta and prediction to calculate tank movements. -->
+                The tricky part is the implementation of the multiplayer. Since the game renders only 17 times per second (as the original game did), and tanks move
+              exactly one pixel per frame, it is not possible to use timedelta and prediction to calculate tank movements.
+
+                A better multiplayer implementation would be to have the logic run on the server with clients only doing the rendering. The downside is that both clients would experience a slight delay.
               </p>
             </div>
             <div class="buttons">
@@ -990,7 +992,7 @@
           <div class="whoami">
             <h1>Who am I?</h1>
             <p>
-              Hi! I'm Peter, a junior web/javascript developer. I've always been close to programming, but
+              Hi! I'm Peter, a frontend developer. I've always been close to programming, but
               never in a professional way.
             </p>
             <p>
@@ -1067,6 +1069,15 @@
                 <div class="content">
                   <p class="year">What's next?</p>
                   <a data-nav href="#contact">Contact me</a><span>👋</span>
+                </div>
+              </div>
+              <div class="container right">
+                <div class="content">
+                  <div class="ribbon">Career started</div>
+                  <p class="year career">2022 February</p>
+                  <p>
+                    Started working as a frontend (React) developer at VecturaGames working on a onepage mapping application (tracks, waypoints, elevation graphs, ...).
+                  </p>
                 </div>
               </div>
             </div>
